@@ -41,7 +41,7 @@
 	},
 	"scripts": {
 		"client": "react-scripts start",
-		"start": "nodemon src/server/server.js",
+		"start": "node src/server/server.js",
 		"dev": "run-p client start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
