@@ -1,0 +1,126 @@
+.weather {
+	height: 250px;
+	padding: 0px 0px;
+}
+.weather a {
+	height: 250px !important;
+	width: 100%;
+}
+.News2tab {
+	text-align: center !important;
+}
+.News2BTabRecent {
+	display: flex;
+	flex-direction: row;
+}
+.News2BTabPix {
+	height: 72px;
+	width: 110px;
+}
+.MV1 {
+	display: flex !important;
+	margin: 0 !important;
+}
+.picoi{
+align-self: flex-end;
+	margin-left: 20px;
+}
+@media screen and (min-width: 767px) {
+}
+
+.MVNO {
+	border: 0 !important;
+	display: flex;
+	margin-top: -6px;
+	padding: 3px 9px 2px 9px;
+	color: red;
+	border-radius: 50%;
+}
+.chet{
+	font-weight: bolder !important;
+
+}
+
+@media screen and (min-width: 767px) {
+	.MVNO {	outline: 2px solid;}
+	
+}
+		@media screen and (max-width: 600px) {
+	.MVNO {
+		margin-right: 1px;
+	}
+}
+.mvlink {
+	font-size: 14px;
+	width: 65%;
+}
+.mvdate {
+	font-size: 13px !important;
+}
+.newsletter-width {
+	width: 70px;
+	margin: 0 auto;
+	border-color: burlywood;
+	margin-bottom: 6px;
+}
+
+.newsletter-Sub {
+	font-size: 17px !important;
+}
+
+.newsletter-form .input-group {
+	border: 1px solid rgb(219, 219, 214) !important;
+	height: 32px;
+	border-radius: 4px !important;
+	width: 80% !important;
+	margin: 0 auto;
+}
+.newsletter-form .input-group-addon {
+	margin-top: 7px !important;
+}
+.newsletter-form input {
+	height: 30px;
+	border: 0;
+	border-left: 1px solid rgb(187, 189, 175);
+}
+#myTab {
+	border: none;
+}
+#myTab li {
+	background: rgba(240, 240, 240, 0.267);
+}
+#myTab li:hover,
+#myTab li:active {
+	border-bottom: none !important;
+	background: none;
+}
+.News2BTabDate {
+	font-size: 12px;
+	color: rgb(134, 141, 146);
+}
+.mvdate {
+	font-size: 11px !important;
+}
+.advertisement img {
+	margin: 0 !important;
+}
+.newsletter-form .btn:hover {
+	background: rgb(248, 90, 90);
+	color: white !important;
+}
+.far.fa-bell {
+	font-size: 40px;
+	color: rgba(83, 151, 241, 0.884);
+	text-shadow: 2px 5px 5px white;
+	font-weight: bold !important;
+}
+/* .grade {
+	background: rgba(190, 190, 190, 0.116);
+} */
+.category-menu .fa,
+.category-menu {
+	font-size: 13px;
+}
+.category-icon span {
+	font-size: 12px;
+}

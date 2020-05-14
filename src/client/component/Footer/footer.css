@@ -1,0 +1,19 @@
+.footer {
+	color: white;
+	padding-top: 50px;
+	background-image: linear-gradient(
+		to top,
+		rgba(14, 34, 66, 0.795),
+		rgba(128, 4, 45, 0.945),
+		rgba(243, 114, 114, 0.39)
+	);
+}
+.Footer-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	font-weight: bold;
+	font-style: italic;
+	font-family: cursive;
+}

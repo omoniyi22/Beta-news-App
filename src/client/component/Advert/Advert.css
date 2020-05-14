@@ -1,0 +1,11 @@
+.button-link {
+	text-decoration: underline !important;
+}
+.Clist {
+	font-size: 14px !important;
+	border-radius: 0px !important;
+	background: rgba(232, 232, 255, 0.164);
+}
+.Clist1 {
+	background: rgba(232, 232, 255, 0.164);
+}

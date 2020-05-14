@@ -1,0 +1,143 @@
+.NewOne {
+	padding: 0 !important;
+	
+}
+@font-face {
+	font-family: ubu;
+	src: url(Ubuntu-Regular.ttf);
+} 
+.app{
+	color: rgba(0, 0, 0, 0.809);
+	font-family: ubu;
+	
+}
+.tsm{
+	font-size: 10px;
+}
+.newsIcon {
+	height: 188px;
+	background-size: cover;
+}
+.newsIcon.diff {
+	border-bottom: 0px solid !important;
+}
+.newsIcon.diff .newsIconNews {
+	border-bottom: 0px solid !important;
+}
+.newsIconNews {
+	display: flex;
+	align-content: flex-end;
+	flex-wrap: wrap;
+	text-align: left;
+	height: 160px;
+	color: white;
+	border-bottom: 1px solid white;
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.726), rgba(0, 0, 0, 0));
+}
+.newsItems {
+	width: 100%;
+	font-size: 12px
+}
+.newsItemsText {
+	max-height: 0;
+	transition: opacity 0.4s ease-out, max-height 0.4s ease-out;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+}
+.newsIconNews:hover .newsItemsText {
+	max-height: 55px;
+	height: auto;
+	text-overflow: ellipsis;
+	white-space: wrap;
+}
+/*  News One and Two in group One central */
+@media screen and (min-width: 990px) {
+	.newsOne2 {
+		height: 371px;
+		background-size: cover;
+	}
+	.newsOne2 .newsIconNews {
+		height: 343px !important;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.app {
+		margin: 0 1px !important;
+	}
+	.col-md-6 {
+		width: 100% !important;
+	}
+
+	.NewsOneDivided {
+		width: 50% !important;
+	}
+	.NewOne {
+		min-width: 50%;
+	}
+	.newsIcon {
+		height: 220px;
+		padding-top: 5px !important;
+	}
+	.newsIconNews {
+		height: 200px;
+		border-bottom: solid 1px white;
+	}
+	.newsItemsText {
+		max-height: 0px;
+		font-size: 11px;
+	}
+
+	.newsOne2 {
+		min-width: 100% !important;
+		height: 350px;
+		background-size: cover;
+	}
+	.newsOne2 .newsIconNews {
+		height: 313px !important;
+	}
+	.newsOne2 .newsItemsText {
+	}
+	.col-md-8 {
+		min-width: 100%;
+	}
+	.col-md-2 {
+		min-width: 100%;
+	}
+}
+@media screen and (max-width: 767px) {
+	.newsOne2 {
+		min-width: 100% !important;
+		height: 250px;
+	}
+	.newsOne2 .newsIconNews {
+		height: 212px !important;
+		-bottom: solid 1px white;
+	}
+
+	.NewOne {
+		min-width: 50%;
+	}
+	.newsIcon {
+		height: 180px;
+		padding-top: 5px !important;
+	}
+	.newsIconNews {
+		height: 156px;
+	}
+}
+
+.newsOne2 .newsIconNews {
+	height: 330px;
+}
+
+.newsOne2 .newsItemsText {
+	max-height: 55px;
+}
+.newsOne2 .newsIconNews:hover .newsOne2 .newsItemsText {
+	max-height: 55px;
+}
+.newsItemsText.big {
+	max-height: 55px !important;
+}

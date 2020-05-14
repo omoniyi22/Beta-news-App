@@ -1,0 +1,312 @@
+.fa-blog{
+font-size:82px !important;
+min-width: 1000px, 300px !important;
+color: rgba(97, 88, 88, 0.884);
+text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.367);
+
+}
+.pico .fa-user,.pico .fa-envelope, .pico .fa-industry {
+    font-size: 80px !important;
+    color: rgba(97, 88, 88, 0.884);
+    text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.367);
+
+    font-weight: bold !important
+}
+.pico{
+    min-width:  300px !important;
+    min-height: 285px !important;
+    padding: 50px, 20px !important;
+    border:11px solid rgba(98, 137, 214, 0.829);
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	font-weight: bold;
+	font-style: italic;
+    font-family: cursive;
+    background-color: rgba(255, 255, 255, 0.993);
+    border-radius: 15%;
+}
+.member-info {
+    border-radius: 49%;
+    border: 3px solid rgba(98, 137, 214, 0.829);
+
+}
+.pea{
+    font-size: 13px !important;
+    text-transform: capitalize !important;
+}
+textarea.contents{
+    height: 200px !important;
+    border-radius:0 !important
+}
+.filecharge{
+    max-width: 99% !important;
+    font-size: small;
+}
+.form-control.description{
+    font-size: 2px;
+   max-height: 37px;
+}
+.flt{
+    float: right !important;
+}
+.smallet{
+   max-width: 75px !important;
+    height: 40px !important;
+    border-radius: 20px
+}
+.jed{
+    margin-top: 27px !important;
+    margin-left: 0px !important;
+}
+.chec, .neye{
+    font-size: x-large !important;
+}
+.fa-trash-alt.checg{
+    margin-top: 3px;
+    font-size: 17px !important;
+}
+.myy{
+    width: 100px !important;
+    float: right
+}
+.neye{
+    font-size: 23px !important;
+}
+.neyey{
+    font-size: 21px !important;
+}
+.mmwiew{
+    margin-top: 24px !important;
+}
+.mwiew{
+    margin-top:16px !important
+}
+sup.fa-envelope, sup.fa-envelope-open-text{
+    font-size: 69px !important;
+}
+.biz{
+    max-width: 60%;
+    margin-left: auto;
+    color: rgb(100, 144, 219) !important;
+    /* background: rgb(98, 128, 236); */
+    margin-right: auto;
+    overflow: hidden !important;
+text-transform: capitalize;
+text-overflow: ellipsis;
+white-space: nowrap;
+border-radius: 4px;
+font-weight: 400;
+margin-top:6px !important;
+margin-bottom:18px !important;
+border-radius: 8px !important;
+}
+.fofo{
+    padding-bottom:0px !important  ;
+}
+.trach{
+    /* outline-radius: 20px !important; */
+    padding: 5px 7px !important;
+    font-size: 11px !important;
+    margin:0 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+    text-transform: capitalize !important;
+    color: white !important
+    /* color:  rgba(41, 142, 243, 0.952) !important; */
+    /* outline:  solid 1px; */
+}
+.text-reder{
+    color: red !important;
+}
+.ded{
+    border-radius: none !important;
+}
+.fixe{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+    left: 22px;
+    font-size: 12px !important;
+    top: -6px !important;
+    position: absolute;
+    z-index: 1;
+    color: rgb(0, 0, 0) !important;
+
+    max-width: 150px;
+outline: 1px  rgba(41, 142, 243, 0.952);
+border-bottom: none !important;
+overflow: hidden !important;
+text-transform: capitalize;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+.messageModal {
+    float: left !important;
+    z-index: 1 !important;
+    position: fixed !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: #14111137 !important;
+    /* overflow: auto !important; */
+    left: 0 !important;
+    top: 0 !important;
+}
+.mmoadal{
+    max-width: 600px !important;
+    min-width: 500px !important;
+
+
+}
+.readMessage{
+    display: flex;
+    flex-direction: row;
+}
+/* .mmoadal{
+margin: auto !important;
+    width: 39% !important;
+    padding: 30px !important;
+    border: 1px solid !important;
+    background: white !important;
+    float: left !important;
+} */
+.cloc{
+    display: block !important;
+}
+
+
+
+
+
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.readMessagePi{
+    border-radius:50% ;
+    height: 78px !important;
+    width: 78px !important;
+}
+.exclusiv{
+    font-size: 52px;
+    color: white;
+    text-shadow: 0px  0px  4px black;
+    margin: 8px 16px !important
+}
+.readMessagePi{
+    border-bottom:none !important ;
+}
+.lea {
+    font-size: 20px;
+font-weight: 100;}
+.lewt{
+    font-size:large;
+}
+.readMessageTexs{
+    font-weight: bold !important;
+}
+.readMessageTex{
+    max-height: 159px;
+    min-height: 159px;
+    overflow: hidden;
+    text-overflow: inherit;
+    overflow-y: scroll;
+
+}
+/* max-width: 150px;
+outline: 1px  rgba(41, 142, 243, 0.952);
+border-bottom: none !important;
+overflow: hidden !important;
+text-transform: capitalize;
+white-space: nowrap;
+text-overflow: ellipsis; */
+.lop{
+    color: red !important;
+    outline: red solid 3px !important;
+}
+.lopa{
+    color: rgb(81, 81, 255) !important;
+    outline: rgb(63, 63, 250) solid 3px !important;
+}
+.witi{
+    color: red !important;
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: monospace;
+}
+.busas .fa-user {
+    font-size: 17px !important;
+}
+
+.busas {
+    text-align: center;
+    margin-bottom: -45px;
+    margin-left: 4px
+
+}

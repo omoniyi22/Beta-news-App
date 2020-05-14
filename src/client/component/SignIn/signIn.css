@@ -1,0 +1,61 @@
+.signIn {
+	font-family: monospace;
+}
+.signIn .reo {
+	margin: 0 auto !important;
+}
+.signIn .w-100 {
+	letter-spacing: 2px;
+	display: flex;
+	justify-content: center;
+}
+.signIn .fa-user,
+.signIn .fa-eye, 
+.signIn .fa-eye-slash, 
+.signIn .fa-backspace, 
+.fa-lock {
+	padding-top: 10px;
+	font-size: 15px;
+}
+.signIn .put {
+	border: none;
+	border-radius: none !important;
+	border-left: 1px solid rgb(221, 220, 220);
+}
+.signIn .input-group {
+	border-radius: none !important;
+	border-radius: 4px;
+}
+.signIn .input-group-addon {
+	border-radius: 50%;
+	padding-right: 12px !important;
+	padding-left: 13px !important;
+	color: rgb(235, 124, 124) !important;
+}
+.signIn .form-contol:focus.,
+.signIn .form-contol:enabled {
+	border: 0 solid rgb(255, 255, 255) !important;
+	background: white;
+}
+
+input.submit:hover {
+	background: rgba(31, 144, 209, 0.616);
+	color: white;
+}
+input.submit {
+	background: rgba(206, 206, 206, 0.15);
+}
+.signIn input,
+.signIn .input-group {
+	border-radius: 0 !important;
+}
+.signIn .input-group {
+	border-radius: 0 !important;
+	border-bottom: none !important;
+}
+.signIn .fa-backspace,
+.signIn .fa-eye-slash
+{
+	font-size: 14px !important;
+}
+

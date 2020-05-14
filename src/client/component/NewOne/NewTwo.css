@@ -1,0 +1,157 @@
+@media screen and (min-width: 650px) {
+	.newsTwoIcon {
+		width: 50% !important;
+		height: 367px !important;
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		border-radius: 2px;
+
+	}
+}
+@media screen and (max-width: 768px) {
+	.newsTwoIcon{margin-top: 5px !important;
+	padding-top: 0 !important;
+padding-bottom: 0 !important; }
+	.newsTwoIcon{margin-bottom: 35px !important;
+	padding-top: 0 !important;
+padding-bottom: 0 !important; }
+	.newsIcon{margin-bottom: 5px !important;
+	padding-top: 0 !important;
+padding-bottom: 0 !important; }
+	.newsIcon{margin-top: 5px !important;
+	padding-top: 0 !important;
+padding-bottom: 0 !important; }
+}
+
+@media screen and (max-width: 650px) {
+	.ero {
+		top: 45px !important;
+		z-index: 1;
+		position: absolute !important;
+	}
+	.newsTwoIcon {
+		height: 289px;
+		display: flex !important;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		padding: 0 4px;
+		margin-top: 15px;
+		border-radius: 2px;
+	}
+}
+
+.ero {
+	top: 40px;
+	z-index: 1;
+	position: absolute !important;
+}
+
+.strike {
+	color: red;
+	opacity: 0.6;
+}
+
+.newstwocontent {
+	color: white;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 10px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	width: 100%;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.726), rgba(0, 0, 0, 0));
+}
+
+.news2 {
+	display: flex;
+	margin-bottom: 18px;
+}
+
+.newsTwoIconPix {
+	border-radius:4px;
+	height: 78px;
+	width: 131px;
+	background: rgb(187, 181, 176);
+}
+.news2Text {
+	margin-left: 2px !important;
+	font-size: 14px !important;
+}
+.NewTwo1bag {
+	margin-bottom: 30px;
+}
+@media screen and (min-width: 767px ){
+}
+@media screen and (max-width: 767px ){
+	.NewTwo1bag {
+		padding-bottom: 10px;
+	}
+	.stepdown{
+		margin-bottom:12px !important ;
+	}
+}
+
+.user-comment{
+	font-size: 18px !important;
+}
+.NewTwo1bpix {
+	height: 210px;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	padding-bottom: 8px;
+}
+.betatitle1 {
+	font-size: 12pX;
+	font-weight: 300 !important;
+}
+.betatitle {
+	font-size: 12pX;
+	font-weight: 300;
+}
+.strike2 {
+	top: -10px;
+	left: 10px;
+}
+.brubk{
+	font-size: 20px !important;
+}
+.fa.fa-bookmark {
+	color: white;
+	text-shadow: 0px  0px  3px rgb(234, 11, 11);
+	color: rgba(151, 125, 125, 0.136) !important;
+	font-stretch: extra-expanded;
+	font-weight: bold;
+}
+
+.fa-angle-left,
+.fa-angle-right {
+	border-radius: 3px;
+	background: #2f95c0 !important;
+	padding-top: 2px !important;
+	padding-bottom: 1px !important;
+}
+.link {
+	cursor: pointer;
+}
+.link:visited,
+.link:active {
+	color: red;
+}
+.fa.fa-clock {
+	color: rgb(250, 156, 156);
+}
+
+@media screen and (max-width: 1200px) {
+	.Second1 .col-lg-6 {
+		clear: both;
+		border-radius: 3px;
+	}
+}
+.font-weight-bold {
+	font-size: 16px;
+	font-weight: 500 !important;
+}

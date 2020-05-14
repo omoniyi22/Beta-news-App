@@ -1,0 +1,23 @@
+.contact {
+	margin: 15px auto !important;
+}
+.contact .card {
+}
+.form.row input {
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 47px;
+	font-size: 13px !important;
+}
+.form.row textarea {
+	padding: 16px 19px;
+	border-radius: 0 17px;
+	height: 250px;
+	font-size: 13px !important;
+}
+.mbottm{
+	border: rgb(58, 122, 252) solid 1px;
+	margin: 0 auto !important;
+	margin-top:30px !important;
+	
+}

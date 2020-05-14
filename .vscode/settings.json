@@ -1,0 +1,17 @@
+{
+  "editor.formatOnSave": true,
+  "[javascript]":{
+    "editor.formatOnSave": true
+  },
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [ "javascript", "javascriptreact", { "language": "html", "autoFix": true } ],
+  "prettier.disableLanguages": [
+    "js"
+  ], 
+  "prettier.configPath": " prettier.configPath ",
+  "prettier.ignorePath": "",
+  "prettier.requireConfig": true,
+  "prettier.prettierPath": " prettier.configPath ",
+
+} 

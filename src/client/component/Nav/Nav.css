@@ -1,0 +1,148 @@
+@media screen and (max-width: 720px) {
+	.sm-hidden {
+		display: none;
+	}
+	.sm-visible {
+		display: block;
+	}
+}
+@media screen and (min-width: 720px) {
+	.lg-hidden {
+		display: none;
+	}
+	.lg-visible {
+		display: block;
+	}
+}
+.font-wei{
+	font-size: 14px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 300 !important;
+	letter-spacing: 2px;
+	color: rgb(136, 16, 16);
+}
+.glack {
+	color: rgb(90, 88, 87);
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+#nav-menu {
+	border-left: rgb(11, 53, 77) solid;
+}
+
+.desk-link {
+	color: rgb(255, 255, 255);
+	background: rgba(236, 69, 69, 0.972);
+	padding: 5px 10px !important;
+	font-size: 13px;
+}
+.desk-link:hover {
+	border-color: rgb(235, 246, 248);
+
+	background: rgba(238, 79, 59, 0.816);
+	color: white;
+}
+
+.nav-tabs {
+	background: rgba(1, 22, 43, 0.856);
+}
+.nav-item {
+	color: white;
+	font-variant: small-caps;
+	font-size: large;
+}
+
+.nav-item:hover,
+.nav-item:hover .arrow {
+	background: whitesmoke;
+	color: rgb(168, 47, 23);
+	padding-bottom: 9px;
+	border: 0px 3px solid white;
+}
+.arrow {
+	color: white !important;
+	border-radius: 50%;
+}
+.mobile-menu:hover {
+	background: rgb(11, 53, 77);
+	cursor: pointer;
+}
+.peach {
+	background: rgb(255, 255, 255);
+}
+.use {
+	border-radius: 50%;
+	width: 37px;
+	height: 35px;
+	background: white;
+}
+.mobile-menu {
+	color: white;
+}
+ul.drop-left{
+	position: absolute;
+	left: -80px !important;
+	z-index: 2;
+}
+.hideam {
+	visibility: hidden;
+}
+.broro{
+	position: fixed;
+	width: 100%;
+	top: 0% !important;
+	z-index: 20 !important;
+	margin-bottom: 9px !important;
+}
+.hundus{
+	position: relative !important;
+}
+.appss{
+	padding-top: 50px !important;
+	margin-top: 20px !important;
+	margin-bottom: 20px !important;
+
+}
+.navsmeu{
+		max-height: 409px;
+		min-height: 609px;
+		text-overflow: inherit;
+		overflow-y: visible;
+		padding-bottom: 50% !important;
+		overflow-wrap: inherit;
+		overflow: scroll;
+	
+	
+}
+
+.mobile-naav{
+width: 100%;
+min-height: 100%;
+z-index: 2 !important;
+color: black !important;
+background: rgba(255, 255, 255, 0.897);
+}
+.nav-item:hover{
+padding-bottom: 0px;
+}
+.dropdowned{
+	display: none;
+}
+.cati:focus  .dropdowned{
+	display: block;
+	position: relative;
+	text-align: left !important;
+	padding: 0%;
+	border: none;
+	opacity: 100% !important;
+background: rgba(255, 255, 255, 0) !important;
+z-index: 2;
+}
+
+.atin{
+	text-align: left;
+	border: none;
+	background: none;
+}

@@ -1,0 +1,29 @@
+.fa-user {
+	border-radius: 50%;
+	font-size: 30px;
+}
+.share-link {
+	font-size: 32px !important;
+}
+.POST_IMG {
+	height: 55vh;
+	width: 100vh !important;
+}
+@media screen and (max-width:600PX){
+	.POST_IMG {
+		height: 48vh;
+
+}
+}
+.share span.w-auto {
+	border-top: solid 2px rgb(201, 201, 201);
+	font-weight: bold;
+	font-size: 16px;
+}
+span.related {
+	font-weight: bold;
+	border-color: rgb(194, 187, 187) !important;
+}
+.about-betty .fa-user {
+	font-size: 67px;
+}

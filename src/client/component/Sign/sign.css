@@ -1,0 +1,49 @@
+.table {
+	font-weight: lighter !important;
+}
+.forms {
+	margin: 23px auto !important;
+	background: rgba(232, 232, 255, 0.164);
+	
+	border-radius: 5px;
+}
+.name {
+	border: 0;
+	font-weight: 300;
+	font-size: 14px;
+}
+LInk:hover{
+	text-decoration: underline !important;
+}
+.Form-intro {
+	display: flex;
+}
+
+.img-circle {
+	width: 55px;
+	border: 1px;
+	height: 55px;
+	border-radius: 50%;
+}
+.radius:focus {
+	border-radius: 1px;
+}
+.radius {
+	border-radius: 7px;
+	padding: 6px 9px;
+}
+.underline {
+	text-decoration: underline !important;
+}
+.alert {
+	margin-top: 5px !important;
+	margin-bottom: 5px !important;
+	padding-top: 7px !important;
+	padding-bottom: 7px !important;
+	font-size: 13px;
+	text-transform: capitalize;
+}
+.alert .close {
+	font-size: 19px;
+
+}
