@@ -122,7 +122,7 @@ export const upload = post => {
                         type: `${post.type}`,
                         title: post.title,
                         description: post.description,
-                        picture: "res",
+                        picture: res,
                         content: post.content
                     }).then(data => dispatch => {
                         return dispatch({

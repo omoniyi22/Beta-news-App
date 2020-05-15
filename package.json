@@ -41,13 +41,13 @@
 	},
 	"scripts": {
 		"client": "react-scripts start",
-		"start": "node src/server/server.js",
+		"start": "nodemon src/server/server.js",
 		"dev": "run-p client start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
-	"proxy": "http://localhost:3001",
+	"proxy": "http://localhost:3003",
 	"eslintConfig": {
 		"extends": "react-app"
 	},

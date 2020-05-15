@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3003;
 const fileUpload = require('express-fileupload')
 const cors = require('cors')
 const path = require('path')
@@ -67,44 +67,46 @@ if (process.env.NODE_ENV === 'production') {
 
 
 // let db = 'mongodb://localhost:27017/'
+let db = 'mongodb+srv://seun2322:seun2322@betanews-igci1.mongodb.net/test?retryWrites=true'
 
-// mongoose.connect(db, { useUnifiedTopology: true, useNewUrlParser: true })
-// 	.then(() => console.log('database is connected'))
+mongoose.connect(db, { useUnifiedTopology: true, useNewUrlParser: true })
+	.then(() => console.log('database is connected'))
 
 
-async function main() {
-	// const uri = "mongodb+srv://<username>:<password>@<your-cluster-url>/test?retryWrites=true&w=majority";
-	let uri = 'mongodb+srv://seun:seun@cluster0-ojyyy.mongodb.net/test?retryWrites=true&w=majority'
+// async function main() {
+// 	// const uri = "mongodb+srv://<username>:<password>@<your-cluster-url>/test?retryWrites=true&w=majority";
+// 	let uri = 'mongodb+srv://seun2322:seun2322@betanews-igci1.mongodb.net/test?retryWrites=true&w=majority'
 
-	const client = new MongoClient(uri, {
-		useUnifiedTopology: true,
-		useNewUrlParser: true,
-		ssl: true,
-		retryWrites: true
-	});
+// 	const client = new MongoClient(uri, {
+// 		useUnifiedTopology: true,
+// 		useNewUrlParser: true,
+// 		ssl: true,
+// 		retryWrites: true
+// 	});
 
-	try {
-		// Connect to the MongoDB cluster
-		await client.connect();
 
-		// Make the appropriate DB calls
-		await listDatabases(client);
+// 	try {
+// 		// Connect to the MongoDB cluster
+// 		await client.connect();
 
-	} catch (e) {
-		console.error(e);
-	} finally {
-		await client.close();
-	}
-}
+// 		// Make the appropriate DB calls
+// 		await listDatabases(client);
 
-main().catch(console.error);
+// 	} catch (e) {
+// 		console.error(e);
+// 	} finally {
+// 		await client.close();
+// 	}
+// }
 
-async function listDatabases(client) {
-	databasesList = await client.db().admin().listDatabases();
+// main().catch(console.error);
 
-	console.log("Databases:");
-	databasesList.databases.forEach(db => console.log(` - ${db.name}`));
-};
+// async function listDatabases(client) {
+// 	databasesList = await client.db().admin().listDatabases();
+
+// 	console.log("Databases:");
+// 	databasesList.databases.forEach(db => console.log(` - ${db.name}`));
+// };
 
 
 app.listen(PORT, () => {
