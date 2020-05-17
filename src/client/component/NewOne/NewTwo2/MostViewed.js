@@ -50,28 +50,29 @@ class MostViewed extends Component {
   render() {
     return (
       <div className="MostViewed mx-0 mt-o">
-        <div className="w-100 mb-3 ">
-          <span className="fa fa-bell  fa-2x float-left ml-0 text-danger mr-5 mb-1 chet" />
-          <span className="MVheader  auto-fix mt-0 ml-5 font-weight-bold">
-            Most Viewed
+        <div className="w-100 mb-3 px-auto text-center ">
+          <span className="MVheader  mx-auto font-weight-bold">
+            Most Viewed Headlines
         </span>
         </div>
         <div className="border-bottom mb-3">
         </div>
         {this.state.p.map(post => (
           post !== undefined && (
-            <Link to={`/post/${post.type + '+' + post._id}`} className="black-text">
+            <Link to={`/post/${post.type + '+' + post._id}`} className="black-text ">
 
 
-              <div className="MV1 pt-3 mt-2 pb-3 border-bottom">
-                <div className="mvlink font-weight-light  ml-2 mr-3 mt-2 ">
+              <div className="MV1 pt-3  pb-3 my-3  bn-md px-md-1  border rounded-well">
+                <div className="mvlink font-weight-light   mt-2 ml-2 ">
                   <div className="mvtitle">{post.title}</div>
-                  <div className="mvdate">
-                    <span className="fa fa-clock fa-md mr-2" />
-                    <Moment calendar>{post.date}</Moment>
+                  <div className="mvdate mt-2">
+                    <span className="fa fa-clock fa-md mr-2 tsm" />
+                    <span className="tsm ">
+                      <Moment calendar>{post.date}</Moment>
+                    </span>
                   </div>
                 </div>
-                <div className="picoi   ">
+                <div className="picoi mr-1">
                   <div
                     className='News2BTabPix   border  rounded-lg'
                     style={{
@@ -84,7 +85,7 @@ class MostViewed extends Component {
             </Link>
           )
         ))}
-        <div className="MV1 pt-3 mt-2 pb-3 border-bottom">
+        {/* <div className="MV1 pt-3 mt-2 pb-3 border-bottom">
           <div className="mvlink font-weight-light  ml-2 mr-3 mt-2 ">
             <div className="mvtitle">Women before Yoy Quit Listen to Tomi</div>
             <div className="mvdate">
@@ -101,7 +102,7 @@ class MostViewed extends Component {
               }}
             />
           </div>
-        </div>
+        </div> */}
 
       </div>
     );

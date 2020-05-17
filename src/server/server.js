@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3001;
 const fileUpload = require('express-fileupload')
 const cors = require('cors')
 const path = require('path')

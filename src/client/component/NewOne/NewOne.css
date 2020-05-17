@@ -4,7 +4,7 @@
 }
 @font-face {
 	font-family: ubu;
-	src: url(Ubuntu-Regular.ttf);
+	src: url(Ubuntu-Medium.ttf);
 } 
 .app{
 	color: rgba(0, 0, 0, 0.809);

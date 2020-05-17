@@ -73,7 +73,7 @@ class Nav extends Component {
 			<div className='border-bottom pb-0 peach z-depth-1'>
 				<div className='navbar navbar py-2  border-bottom mt-0 z-depth-0'>
 					<div className='navbar-header pull-right h4-responsive mx-0'>
-						<div className='navbar-brand mt-1 pl-0 mr-2 ml-md-4 font-wei  border px-3 mr-2 rounded-lg'>
+						<div className='navbar-brand mt-1 pl-0 mr-2 ml-md-4 font-wei  border px-2 mr-2 rounded-lg'>
 							<Link to='/' className=' font-wei'>
 								Bετα Νεws
 							</Link>

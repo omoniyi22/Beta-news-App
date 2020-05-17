@@ -1,6 +1,8 @@
 import React from 'react';
 import './../singlePost/singlePost.css';
 import './Advert.css';
+import NewTwo1b from './../NewOne/NewTwo1b'
+
 const ads = require('./ads.jpg');
 
 class Advert extends React.Component {
@@ -10,15 +12,15 @@ class Advert extends React.Component {
 	}
 	render() {
 		return (
-			<div className='singlePost col-md-8 mt-2 pt-3  '>
-				<div className='Post row border'>
+			<div className='singlePost col-md-8   '>
+				<div className='Post row '>
 					<div className='col-12 '>
 						<div className='path small my-3'>
 							{' '}
 							<span className='fa fa-home' /> Home / Bετα / Advertise
 						</div>
 						<div className='author badge blue z-depth-0 mt-2'>{'BETA NEWS'}</div>
-						<div className='title mt-2 h2'>Advertise </div>
+						<div className='title mt-2 h2'>Advertise Your Product</div>
 
 						<div className='news details'>
 							<div className='float-left'>
@@ -32,7 +34,7 @@ class Advert extends React.Component {
 							</span>
 						</div>
 					</div>
-					<img src={ads} className='w-100 col-12 mt-3 px-0 border text-center POST_IMG' alt='POST_IMG' />
+					<img src={ads} className='w-100  mt-3 px-0 border text-center POST_IMG' alt='POST_IMG' />
 					<div className='content col-12 py-3 px-1 jumbotron'>
 						<div className='card px-3 mx-1 my-2 py-4  Clist '>
 							Advertise with Hettyosblog.com, the first mixed niche news website from a Nigerian woman’s
@@ -77,7 +79,7 @@ class Advert extends React.Component {
 							<div className='float-left col-2'>
 								<div className='fa fa-user fa-lg border-radius   Clist1 text-white px-2 pt-3' />
 							</div>
-							<div className='small col-10'>
+							<div className='small col-md-10 col-sm-12 my-sm-3'>
 								<span className='font-weight-bold'>Beta</span> <br />
 								Beta is a columnist, astute marketer and customer relationship professional with over 2
 								decades of experience. Her blog aims to motivate women to aspire to greatness
@@ -85,7 +87,7 @@ class Advert extends React.Component {
 						</div>
 					</div>
 				</div>
-				<div className='row my-3 border'>
+				{/* <div className='row my-3 border'>
 					<div className='col-md-6 '>
 						<img className='col-12' />
 						<span className='small col-12'>Chapter 3: Opoku Returns to See Vicky</span>
@@ -126,7 +128,9 @@ class Advert extends React.Component {
 						</div>
 						<div className='post-date small'>{new Date().toDateString()}</div>
 					</div>
-				</div>
+				</div> */}
+				<NewTwo1b />
+
 			</div>
 		);
 	}

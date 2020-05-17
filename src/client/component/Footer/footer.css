@@ -4,8 +4,8 @@
 	background-image: linear-gradient(
 		to top,
 		rgba(14, 34, 66, 0.795),
-		rgba(128, 4, 45, 0.945),
-		rgba(243, 114, 114, 0.39)
+		rgba(104, 14, 44, 0.945),
+		rgba(127, 13, 13, 0.993)
 	);
 }
 .Footer-icon {
@@ -15,5 +15,4 @@
 	font-size: 30px;
 	font-weight: bold;
 	font-style: italic;
-	font-family: cursive;
 }

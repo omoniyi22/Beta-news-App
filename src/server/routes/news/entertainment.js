@@ -21,6 +21,7 @@ router.get('/entertainment', (req, res) => {
     user()
 })
 
+
 router.get('/entertainment/:id', (req, res) => {
     entertainmentDB.findById(req.params.id)
         .then(post => res.json(post))

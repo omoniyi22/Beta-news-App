@@ -20,18 +20,18 @@ class News2B extends Component {
 		return (
 			<div className='News2tab'>
 				<ul id='myTab' className='nav nav-tabs white row mb-4'>
-					<li className=' col-4  py-3 border-right border-bottom'>
-						<a href='#enter' data-toggle='tab' className='text-danger'>
+					<li className=' col-4 px-0  py-3 border-right border-bottom'>
+						<a href='#enter' data-toggle='tab' className='text-danger text-uppercase small'>
 							Entertainment
 						</a>
 					</li>
 					<li className='col-4  py-3 border-bottom border-right'>
-						<a href='#sports' data-toggle='tab' className='text-danger'>
+						<a href='#sports' data-toggle='tab' className='text-uppercase small text-danger'>
 							Sport
 					</a>
 					</li>
 					<li className='active col-4 text-center  py-3 border-right border-bottom'>
-						<a href='#bus' data-toggle='tab' className='text-danger'>
+						<a href='#bus' data-toggle='tab' className='text-uppercase small text-danger'>
 							Business
 					</a>
 					</li>
@@ -41,48 +41,56 @@ class News2B extends Component {
 					<div className='tab-pane  in active' id='enter'>
 						{this.props.entertainment.map(post => (
 							post !== undefined && (
-								<div className='News2BTabRecent mt-3'>
-									<div
-										className='News2BTabPix mr-3 border rounded-lg'
-										style={{
-											backgroundImage: `url(${post.picture})`,
-											backgroundSize: '100% 100%',
-										}}
-									/>
-									<Link to={`/post/${post.type + '+' + post._id}`}>
-										<div className='News2BTabTitle text-left pt-1 '>
-											<div className='News2BTabTopic  news2Text black-text'>{post.title}</div>
-											<div className='News2BTabDate small mt-1 font-weight-light'>
-												<span className='fa fa-calendar-day mr-1' />  <Moment calendar>{post.date}</Moment>
+								<Link to={`/post/${post.type + '+' + post._id}`} >
 
+									<div className='News2BTabRecent mt-3 border py-3 px-3 rounded-well'>
+										<div
+											className='News2BTabPix mr-3 border rounded-lg'
+											style={{
+												backgroundImage: `url(${post.picture})`,
+												backgroundSize: '100% 100%',
+											}}
+										/>
+										<Link to={`/post/${post.type + '+' + post._id}`}>
+											<div className='News2BTabTitle text-left pt-1 '>
+												<div className='News2BTabTopic  news2Text black-text'>{post.title}</div>
+												<div className='News2BTabDate small mt-1 font-weight-light'>
+													<span className='fa fa-calendar-day mr-1 tsm' />
+													<span className="tsm">
+														<Moment calendar>{post.date}</Moment>
+													</span>
+												</div>
 											</div>
-										</div>
-									</Link>
-								</div>
+										</Link>
+									</div>
+								</Link>
 							)
 						))}
 					</div>
 					<div className='tab-pane fade' id='sports'>
 						{this.props.sport.map(post => (
 							post !== undefined && (
-								<div className='News2BTabRecent mt-3'>
-									<div
-										className='News2BTabPix border rounded-lg mr-3'
-										style={{
-											backgroundImage: `url(${post.picture})`,
-											backgroundSize: '100% 100%',
-										}}
-									/>
-									<Link to={`/post/${post.type + '+' + post._id}`}>
-										<div className='News2BTabTitle text-left pt-1 '>
-											<div className='News2BTabTopic  news2Text black-text'>{post.title}</div>
-											<div className='News2BTabDate small mt-1 font-weight-light'>
-												<span className='fa fa-calendar-day mr-1' />  <Moment calendar>{post.date}</Moment>
+								<Link to={`/post/${post.type + '+' + post._id}`} >
 
+									<div className='News2BTabRecent mt-3'>
+										<div
+											className='News2BTabPix border rounded-lg mr-3'
+											style={{
+												backgroundImage: `url(${post.picture})`,
+												backgroundSize: '100% 100%',
+											}}
+										/>
+										<Link to={`/post/${post.type + '+' + post._id}`}>
+											<div className='News2BTabTitle text-left pt-1 '>
+												<div className='News2BTabTopic  news2Text black-text'>{post.title}</div>
+												<div className='News2BTabDate small mt-1 font-weight-light'>
+													<span className='fa fa-calendar-day mr-1' />  <Moment calendar>{post.date}</Moment>
+
+												</div>
 											</div>
-										</div>
-									</Link>
-								</div>
+										</Link>
+									</div>
+								</Link>
 							)
 						))}
 					</div>
@@ -90,24 +98,27 @@ class News2B extends Component {
 					<div className='tab-pane fade' id='bus'>
 						{this.props.politics.map(post => (
 							post !== undefined && (
-								<div className='News2BTabRecent mt-3'>
-									<div
-										className='News2BTabPix mr-3 border rounded-lg'
-										style={{
-											backgroundImage: `url(${post.picture})`,
-											backgroundSize: '100% 100%',
-										}}
-									/>
-									<Link to={`/post/${post.type + '+' + post._id}`}>
-										<div className='News2BTabTitle text-left pt-1 '>
-											<div className='News2BTabTopic  news2Text black-text'>{post.title}</div>
-											<div className='News2BTabDate small mt-1 font-weight-light'>
-												<span className='fa fa-calendar-day mr-1' />  <Moment calendar>{post.date}</Moment>
+								<Link to={`/post/${post.type + '+' + post._id}`} >
 
+									<div className='News2BTabRecent mt-3'>
+										<div
+											className='News2BTabPix mr-3 border rounded-lg'
+											style={{
+												backgroundImage: `url(${post.picture})`,
+												backgroundSize: '100% 100%',
+											}}
+										/>
+										<Link to={`/post/${post.type + '+' + post._id}`}>
+											<div className='News2BTabTitle text-left pt-1 '>
+												<div className='News2BTabTopic  news2Text black-text'>{post.title}</div>
+												<div className='News2BTabDate small mt-1 font-weight-light'>
+													<span className='fa fa-calendar-day mr-1' />  <Moment calendar>{post.date}</Moment>
+
+												</div>
 											</div>
-										</div>
-									</Link>
-								</div>
+										</Link>
+									</div>
+								</Link>
 							)
 						))}
 					</div>

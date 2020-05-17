@@ -10,8 +10,8 @@ class Footer extends Component {
 		return (
 			<footer className='footer mt-5 text-center px-3 container-fluid'>
 				<div className='row'>
-					<div className='col-md-6  Footer-icon my-2'>Bετα Νεws</div>
-					<div className='col-md-6 my-2'>
+					<div className='col-md-6 text-uppercase  my-2'>Bετα Νεws</div>
+					<div className='col-md-6 my-2 sm-hidden'>
 						Beta News is your everyday Nigeria Events, News and happenings, Fashion and Beauty,
 						Entertainment, Lifestyle, Short Stories, Sports, "gist"
 					</div>

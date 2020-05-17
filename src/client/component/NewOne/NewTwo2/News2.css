@@ -19,14 +19,18 @@
 }
 .MV1 {
 	display: flex !important;
-	margin: 0 !important;
 }
 .picoi{
 align-self: flex-end;
 	margin-left: 20px;
 }
-@media screen and (min-width: 767px) {
+@media screen and (max-width: 767px) {
+	.advertisement img {
+		height: 59vw !important;
+			margin: 0 !important;
+		}
 }
+
 
 .MVNO {
 	border: 0 !important;
@@ -102,6 +106,7 @@ align-self: flex-end;
 	font-size: 11px !important;
 }
 .advertisement img {
+height: 29vw;
 	margin: 0 !important;
 }
 .newsletter-form .btn:hover {
@@ -110,7 +115,7 @@ align-self: flex-end;
 }
 .far.fa-bell {
 	font-size: 40px;
-	color: rgba(83, 151, 241, 0.884);
+	color: rgb(246, 39, 39);
 	text-shadow: 2px 5px 5px white;
 	font-weight: bold !important;
 }

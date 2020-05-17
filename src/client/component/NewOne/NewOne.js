@@ -38,7 +38,7 @@ function Row2(props) {
 		<div className='container-fliud'>
 			<div className='row px-3'>
 				<SinglePost
-				//  prod={props.match.params.id} 
+					prod={props.match.params.id}
 				/>
 				<NewTwo2 />
 			</div>
@@ -119,7 +119,7 @@ class NewOne extends React.Component {
 				<div className="app appss px-3 mx-4 ">
 					<div className="apps">
 						<Switch >
-							<Route exact path='/post' component={Row2} />
+							<Route exact path='/post/:id' component={Row2} />
 							<Route exact path='/Contact' component={Contact} />
 							<Route exact path='/Advert' component={AdvertRow} />
 							<Route exact path='/SignUp' component={SignUp} />

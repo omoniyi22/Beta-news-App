@@ -1,18 +1,50 @@
 .fa-user {
 	border-radius: 50%;
-	font-size: 30px;
+	font-size: 18px;
 }
 .share-link {
 	font-size: 32px !important;
 }
 .POST_IMG {
-	height: 55vh;
-	width: 100vh !important;
+	margin-right: 14px !important;
+	margin-left: 14px !important;
+	height: 60vh;
+	width: 100vw !important;
 }
+.smaller{
+	font-size: 0.87em;
+}
+.loading{
+	background: white !important;
+	z-index: 1;
+	position: fixed;
+	margin-top: -60px;
+	margin-left: -40px;
+width: 100% !important;
+height:  100% !important;
+}
+.loading div {
+	text-align: center;
+	height:  100% !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	font-weight: bold;
+	font-style: italic;
+}
+.loading div img{
+	height: 9pc;
+	width: 13pc;
+}
+
+
 @media screen and (max-width:600PX){
 	.POST_IMG {
-		height: 48vh;
-
+		height: 48vw;
+}
+.mbv{
+	margin-top: -5px;
 }
 }
 .share span.w-auto {

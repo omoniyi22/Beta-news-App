@@ -64,53 +64,56 @@ class NewTwo1b extends Component {
 					{this.state.p.map(post => (
 						post !== undefined && (
 
+							<Link to={`/post/${post.type + '+' + post._id}`} className="bv">
 
-							<div className='row NewTwo1bag border  rounded mb-sm-3'>
-								<div
-									className='col-md-6 mx-0  NewTwo1bpix'
-									style={{
-										backgroundImage: `url(${post.picture})`,
-										backgroundSize: '100% 100%',
-									}}>
-									<span class='border rounded-circle px-2 py-1 ml-0 mdb-color lighten-4 strike strike2 fa fa-bolt position-absolute' />
+								<div className='row NewTwo1bag z-depth-1 rounded-well mb-sm-3'>
+									<div
+										className='col-md-6 mx-0   NewTwo1bpix'
+										style={{
+											backgroundImage: `url(${post.picture})`,
+											backgroundSize: '100% 100%',
+										}}>
+										<span class='border rounded-circle px-2 py-1 ml-0 mdb-color lighten-4 strike strike2 fa fa-bolt position-absolute' />
 
-								</div>
-								<div className='col-md-6 mx-0 '>
-									<div className='font-weight-bold mt-2 mb-2'>
-										<Link to={`/post/${post.type + '+' + post._id}`} className="black-text">
-
-											{post.title}
-										</Link><span className=' float-right z-depth-0 mx-0 btn-sm px-2 py-1  font-weight-light badge z-depth-0 border white  rounded-pill'>
-											<span className="text-danger text-capitalize">  {post.type} News</span>
-										</span>
 									</div>
-									<div className='small'>
-										<Link to={`/post/${post.type + '+' + post._id}`} className="black-text" >
+									<div className='col-md-6 mx-0 '>
+										<div className='font-weight-bold mt-2 mb-2'>
+											<Link to={`/post/${post.type + '+' + post._id}`} className="black-text">
 
-											{post.description}
-										</Link>
-									</div>
-									<Link to={`/post/${post.type + '+' + post._id}`} className="mb-sm-3">
+												{post.title}
+											</Link><span className=' float-right z-depth-0 mx-0 btn-sm px-2 py-1  font-weight-light badge z-depth-0 tsm text-uppercase white  rounded-pill'>
+												<span className="text-danger text-uppercase">  {post.type} </span>
+											</span>
+										</div>
+										<div className='small'>
+											<Link to={`/post/${post.type + '+' + post._id}`} className="black-text" >
 
-										<button className='btn btn-md text-capitalize white text-danger border py-1 px-2 mt-2 ml-0 z-depth-0 small rounded-pill'>
-											Read More »
+												{post.description}
+											</Link>
+										</div>
+										<Link to={`/post/${post.type + '+' + post._id}`} className="msm-hidden mb-sm-3">
+
+											<button className='btn btn-md text-capitalize white text-danger border py-1 px-2 mt-2 ml-0 z-depth-0 small rounded-pill'>
+												Read More »
 						</button>
-									</Link>
-									<div className='betatitle small mt-1'>
-										<span className='fa fa-newspaper' /> Beta News<span className='fa fa-clock ml-2 mr-1 tsm' />
-										<Moment calendar>{post.date}</Moment>
-										<span className='float-right'>
-											{post.view && <><span className='fa fa-eye tsm' /> {post.views}</>}
-										</span>
+										</Link>
+										<div className='betatitle small mt-1'>
+											<div className="mt-2 mb-1 tsm">
+												<span className='fa fa-newspaper' /> Beta News<span className='fa fa-clock ml-2 mr-1 tsm' />
+												<Moment calendar>{post.date}</Moment>
+											</div>
+											<span className='float-right'>
+												{post.view && <><span className='fa fa-eye tsm' /> {post.views}</>}
+											</span>
+										</div>
 									</div>
 								</div>
-							</div>
 
-
+							</Link>
 
 						)
 					))}
-					<div className='row NewTwo1bag border rounded'>
+					{/* <div className='row NewTwo1bag border rounded'>
 						<div
 							className='col-md-6 mx-0  NewTwo1bpix'
 							style={{
@@ -142,7 +145,7 @@ class NewTwo1b extends Component {
 							</span>
 							</div>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</div >
 		);
