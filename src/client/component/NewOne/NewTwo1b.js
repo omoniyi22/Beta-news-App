@@ -53,10 +53,10 @@ class NewTwo1b extends Component {
 	}
 	render() {
 		return (
-			<div className='row  my-4 p-3'>
-				<div className='col-12 pl-2 mb-4'>
+			<div className='row  my-4 p-3 '>
+				<div className='col-12 pl-2  mb-4'>
 					<span className='font-weight-bold fa fa-bookmark brubk fa-3x mr-2 ' />
-					<span className='ml-2'>Top Stories</span>
+					<span className='ml-2 gid'>Top Stories</span>
 				</div>
 
 				<div className='col-12'>
@@ -64,9 +64,9 @@ class NewTwo1b extends Component {
 					{this.state.p.map(post => (
 						post !== undefined && (
 
-							<Link to={`/post/${post.type + '+' + post._id}`} className="bv">
+							<Link to={`/post/${post.type + '+' + post._id}`} className="bv ">
 
-								<div className='row NewTwo1bag z-depth-1 rounded-well mb-sm-3'>
+								<div className='row NewTwo1bag z-depth-1 rounded-well mb-sm-3 '>
 									<div
 										className='col-md-6 mx-0   NewTwo1bpix'
 										style={{

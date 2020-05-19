@@ -31,14 +31,33 @@ router.post('/finance/comment/:id', (req, res) => {
     financeDB.findById(req.params.id)
         .then(post => {
             const { user, value } = req.body
-            if (value) {
+            if (value && user) {
                 post.comments = [{
-                    "users": user,
-                    "value": value,
+                    user,
+                    value,
                     "date": Date()
                 }, ...post.comments]
                 post.save()
-                    .then(() => res.json(post))
+                    .then(() => res.json({
+                        user,
+                        value,
+                        "date": Date()
+                    }))
+                    .catch(err => {
+                        res.status(400).json(err)
+                    })
+            } else if (!user && value) {
+                post.comments = [{
+                    "user": "Anonymous",
+                    value,
+                    "date": Date()
+                }, ...post.comments]
+                post.save()
+                    .then(() => res.json({
+                        "user": "Anonymous",
+                        value,
+                        "date": Date()
+                    }))
                     .catch(err => {
                         res.status(400).json(err)
                     })

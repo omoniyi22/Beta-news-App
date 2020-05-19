@@ -51,7 +51,7 @@ class MostViewed extends Component {
     return (
       <div className="MostViewed mx-0 mt-o">
         <div className="w-100 mb-3 px-auto text-center ">
-          <span className="MVheader  mx-auto font-weight-bold">
+          <span className="MVheader  mx-auto gid font-weight-bold ">
             Most Viewed Headlines
         </span>
         </div>
@@ -59,11 +59,11 @@ class MostViewed extends Component {
         </div>
         {this.state.p.map(post => (
           post !== undefined && (
-            <Link to={`/post/${post.type + '+' + post._id}`} className="black-text ">
+            <Link to={`/post/${post.type + '+' + post._id}`} className="black-text  ">
 
 
-              <div className="MV1 pt-3  pb-3 my-3  bn-md px-md-1  border rounded-well">
-                <div className="mvlink font-weight-light   mt-2 ml-2 ">
+              <div className="MV1 pt-2  pb-3 my-0  bn-md px-md-1 border-bottom">
+                <div className="mvlink font-weight-light   mt-2  ">
                   <div className="mvtitle">{post.title}</div>
                   <div className="mvdate mt-2">
                     <span className="fa fa-clock fa-md mr-2 tsm" />
@@ -72,7 +72,7 @@ class MostViewed extends Component {
                     </span>
                   </div>
                 </div>
-                <div className="picoi mr-1">
+                <div className="picoi ">
                   <div
                     className='News2BTabPix   border  rounded-lg'
                     style={{

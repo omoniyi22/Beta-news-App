@@ -56,9 +56,9 @@ class Contact extends React.Component {
 
 	render() {
 		return (
-			<div className='contact'>
+			<div className='contact '>
 				<div className='contact col-md-7 mx-1  px-1'>
-					<div className='text-center h2 mb-3'> Get in touch</div>
+					<div className='text-center h2 mb-2'> Get in touch</div>
 					{this.state.mg && <div className="alert alert-primary alert-dismissable fade show col-sm-11 mbottm" role='alert'>
 						<button type="button" className="close text-danger " onClick={this.close = this.close.bind(this)} aria-label="Close"
 							aria-hidden="true">
@@ -66,7 +66,7 @@ class Contact extends React.Component {
                         		</button>
 						{this.state.mg}
 					</div>}
-					<div className='  mt-4 pt-4 pb-1   px-0 mx-0'>
+					<div className='white  mt-2 pt-1 pb-1   px-0 mx-0 border'>
 						<form className='form row mx-1 pb-2 pt-2 px-0' onSubmit={this.onSubmit}>
 							<div className='col-sm-6 mt-2'>
 								<input placeholder='First Name' noValidate className='py-0 first-name w-100 form-control-small'
@@ -100,7 +100,7 @@ class Contact extends React.Component {
 									required />
 							</div>
 							<div className='col-sm-12 mt-3'>
-								<textarea placeholder='Message' className='Message w-100 form-control-small'
+								<textarea placeholder='Message' className='gyg w-100 form-control-small'
 									name='message'
 									onChange={this.onChange}
 									value={this.state.message}

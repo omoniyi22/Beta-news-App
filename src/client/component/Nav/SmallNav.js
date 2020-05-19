@@ -4,7 +4,7 @@ import { changeNav } from './../../Actions/postActions'
 
 function SmallNav(props) {
 
-    return (<div className="mobile-naav animated  fast fadeInLeftBig position-fixed  mr-2 mt-0">
+    return (<div className="mobile-naav animated  fast fadeInLeftBig position-fixed  mr-2 mt-0" >
         <nav class="nav-menu navsmeu  d-lg-block">
             <nav class="navbar navbar-light whiteout navbar-1  ">
                 <div class="navbar-collapse  " id="navbarSupportedContent15">
@@ -12,7 +12,7 @@ function SmallNav(props) {
                         <li class="nav-item px-0 border-top border-bottom border-danger pl-4" onClick={() => props.fun()}>
                             <Link class="nav-link" to="/">Home<span class="sr-only">(current)</span></Link>
                         </li>
-                        <button class="nav-item atin px-0 border-bottom border-danger pl-4">
+                        {/* <button class="nav-item atin px-0 border-bottom border-danger pl-4">
                             <a class="nav-link font-weight-normal  cati" href="#" data-toggle='dropdown' aria-haspopup="true">Categories<span class="sr-only">(current)</span>
                                 <span className className="dropdown-toggle float-right mt-2" />
                                 <ul className="dropdowned">
@@ -25,7 +25,7 @@ function SmallNav(props) {
 
                                 </ul>
                             </a>
-                        </button>
+                        </button> */}
                         <li class="nav-item px-0 border-bottom border-danger pl-4" onClick={() => props.fun()}>
                             <Link class="nav-link" to="/advert">Place-Ads<span class="sr-only">(current)</span></Link>
                         </li>

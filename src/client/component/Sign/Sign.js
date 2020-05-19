@@ -98,13 +98,13 @@ class Sign extends Component {
 				}>
 					<div className='Form-intro  my-2'>
 						<img alt='' className='mr-3 img-circle ' src={first_img} />
-						<span className='mt-3 h5 font-weight-light text-primary'>ENJOY EVERY MOMENT</span>
+						<span className='mt-3 ssk font-weight-light text-primary'>ENJOY EVERY MOMENT WITH US</span>
 					</div>
 
 					<div className='dropdown-divider' />
 					<div className='Form-intro mt-2 mb-1'>
 						<img alt='' className='mr-3 img-circle ' src={first_img} />
-						<span className='mt-3 h6 font-weight-light'>Sign up with BETA news</span>
+						<span className='mt-3 h6 font-weight-light ssk'>Sign up with BETA news</span>
 					</div>
 
 					<div className='dropdown-divider' />
@@ -143,33 +143,33 @@ class Sign extends Component {
 
 
 					<div className=' px-2 py-1 img-thumbnail custom-control-inline w-100 white '>
-						<input placeholder='First Name' className='name w-50 img-thumbnail'
+						<input placeholder='First Name' className='name w-50  ssk img-thumbnail '
 							onChange={this.onChange}
 							name="first_name" />
-						<input placeholder='Last Name' className='name img-thumbnail w-50'
+						<input placeholder='Last Name' className='name  ssk img-thumbnail w-50 '
 							onChange={this.onChange}
 							name="last_name" />
 					</div>
 					<div className=' px-2 py-2 my-2 img-thumbnail  w-100 white '>
-						<input placeholder='Username' className='name w-100 img-thumbnail'
+						<input placeholder='Username' className='name w-100  ssk img-thumbnail '
 							onChange={this.onChange}
 							name="email" />
 						<div className='dropdown-divider mb-2' />
 
-						<input placeholder='Password' type='password' className='name mb-1 img-thumbnail w-100'
+						<input placeholder='Password' type='password' className='name mb-1  ssk img-thumbnail w-100 '
 							onChange={this.onChange}
 							name="password" />
-						<input placeholder='Confirm Password' type='password' className='name img-thumbnail w-100'
+						<input placeholder='Confirm Password' type='password' className='name  ssk img-thumbnail w-100 '
 							onChange={this.onChange}
 							name="password2" />
 					</div>
 					<div className=' px-2 py-1 my-1 img-thumbnail w-100 white '>
-						<input placeholder='Email' className='name w-100 img-thumbnail'
+						<input placeholder='Email' className='name w-100  ssk img-thumbnail '
 							onChange={this.onChange}
 							name="user_email"
 						/>
 						<div className='dropdown-divider mb-2' />
-						<input placeholder='Phone No. (optional)' type='number' className='name img-thumbnail w-100'
+						<input placeholder='Phone No. (optional)' type='number' className='name  ssk img-thumbnail w-100 '
 							onChange={this.onChange}
 							name="phone"
 						/>

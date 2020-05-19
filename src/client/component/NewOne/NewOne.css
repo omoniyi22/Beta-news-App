@@ -4,10 +4,20 @@
 }
 @font-face {
 	font-family: ubu;
-	src: url(Ubuntu-Medium.ttf);
+	font-weight: 200;
+	src: url(Ubuntu-Regular.ttf);
+
+} 
+
+@font-face {
+	font-family: obu;
+	font-weight: 200;
+	src: url(Ubuntu-Light.ttf);
+
 } 
 .app{
 	color: rgba(0, 0, 0, 0.809);
+	font-weight: 100;
 	font-family: ubu;
 	
 }
@@ -107,6 +117,13 @@
 	}
 }
 @media screen and (max-width: 767px) {
+	.app{
+		color: rgba(0, 0, 0, 0.809);
+		font-weight: 100;
+		font-family: obu;
+		background: rgba(209, 209, 209, 0.082);
+		
+	}
 	.newsOne2 {
 		min-width: 100% !important;
 		height: 250px;

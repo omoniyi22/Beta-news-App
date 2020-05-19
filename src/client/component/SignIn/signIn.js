@@ -62,7 +62,7 @@ class SignIn extends Component {
 					<fieldset>
 						<legend>
 						</legend>
-						<div className='h3 font-weight-light w-100 text-primary'>
+						<div className='h6 font-weight-light w-100 text-primary'>
 							<div>Login</div>
 							<div className='fa fa-sign-in-alt mr-0 ml-3 ' />
 						</div>

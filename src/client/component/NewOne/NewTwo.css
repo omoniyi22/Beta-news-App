@@ -9,11 +9,20 @@
 
 	}
 }
+.gid{
+	font-style: normal !important;
+	font-weight: bold !important;
+	color: red !important;
+}
+.gia{
+	font-style: normal !important;
+	font-weight: bold !important;
+}
 .bv{
 	color: rgb(102, 102, 102) !important;
 }
 .rounded-well{
-border-radius: 9px;
+border-radius: 7px;
 }
 .bn-md{
 	border: solid rgb(224, 218, 218)  1px ;

@@ -1,7 +1,8 @@
 import React from 'react';
 import './NewTwo.css';
+import Moment from 'react-moment';
 
-function NewsTwo1c() {
+function NewsTwo1c(props) {
 	return (
 		// 		<div className='row '>
 		// 			<div className='col-11 mx-0'>
@@ -20,68 +21,28 @@ function NewsTwo1c() {
 		// 								</span>
 
 		// 							</a>
-		<div className='step-content  mr-xl-2 p-0 mt-2 container-fluid '>
-			<div className="row  w-100 px-3 mx-auto">
-				<div className="col-sm-6  px-0 px-0 px-1 py-sm-3 stepdown ">
-					<div className="border rounded-lg">
-						<h4 className='font-weight-bold timeline-header red lighten-1 white-text p-2 pl-4'>
-							<span className="fa fa-user user-comment mr-3" />	Ut enim ad minim veniam
-											</h4>
-						<div className='text-muted px-4 small w-100  mt-1 mb-2 pt-0  small'>
-							<i className='far fa-clock tsm' aria-hidden='true ' /><span className="tsm"> 11 hours ago </span>
-						</div>
-						<p className='mb-2 px-4 small'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-							exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-								</p>
-					</div>
-				</div>			<div className="col-sm-6  px-0 px-0 px-1 py-sm-3 stepdown ">
-					<div className="border rounded-lg">
-						<h4 className='font-weight-bold timeline-header red lighten-1 white-text p-2 pl-4'>
-							<span className="fa fa-user user-comment mr-3" />	Ut enim ad minim veniam
-											</h4>
-						<div className='text-muted px-4 small w-100  mt-1 mb-2 pt-0  small'>
-							<i className='far fa-clock tsm' aria-hidden='true ' /><span className="tsm"> 11 hours ago </span>
-						</div>
-						<p className='mb-2 px-4 small'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-							exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-								</p>
-					</div>
-				</div>			<div className="col-sm-6  px-0 px-0 px-1 py-sm-3 stepdown ">
-					<div className="border rounded-lg">
-						<h4 className='font-weight-bold timeline-header red lighten-1 white-text p-2 pl-4'>
-							<span className="fa fa-user user-comment mr-3" />	Ut enim ad minim veniam
-											</h4>
-						<div className='text-muted px-4 small w-100  mt-1 mb-2 pt-0  small'>
-							<i className='far fa-clock tsm' aria-hidden='true ' /><span className="tsm"> 11 hours ago </span>
-						</div>
-						<p className='mb-2 px-4 small'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-							exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-								</p>
-					</div>
-				</div>			<div className="col-sm-6  px-0 px-0 px-1 py-sm-3 stepdown ">
-					<div className="border rounded-lg">
-						<h4 className='font-weight-bold timeline-header red lighten-1 white-text p-2 pl-4'>
-							<span className="fa fa-user user-comment mr-3" />	Ut enim ad minim veniam
-											</h4>
-						<div className='text-muted px-4 small w-100  mt-1 mb-2 pt-0  small'>
-							<i className='far fa-clock tsm' aria-hidden='true ' /><span className="tsm"> 11 hours ago </span>
-						</div>
-						<p className='mb-2 px-4 small'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-							exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-								</p>
-					</div>
-				</div>
 
+		<div className="col-sm-6  px-0 px-0 px-sm-0 px-md-1 py-sm-3 stepdown ">
+			<div className="border rounded-lg">
+				<div className='font-weight-light small timeline-header blue lighten-2 white-text p-2 pl-4'>
+					<span className="fa fa-user user-comment mr-3" />	{props.user}
+				</div>
+				<div className='text-muted px-4 small w-100  mt-1 mb-2 pt-0  small'>
+					<i className='far fa-clock tsm' aria-hidden='true ' /><span className="tsm"> <Moment fromNow>{props.date}</Moment></span>
+				</div>
+				<p className='mb-2 px-4 small tsm'>
+					{props.comment}
+
+				</p>
 			</div>
+
+
+
 		</div>
+
+
+
+
 
 
 		// 					<a href='#!' className=" rounded-lg">

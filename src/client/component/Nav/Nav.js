@@ -71,10 +71,10 @@ class Nav extends Component {
 		)
 		return (
 			<div className='border-bottom pb-0 peach z-depth-1'>
-				<div className='navbar navbar py-2  border-bottom mt-0 z-depth-0'>
+				<div className='navbar navbar py-1  border-bottom mt-0 z-depth-0'>
 					<div className='navbar-header pull-right h4-responsive mx-0'>
-						<div className='navbar-brand mt-1 pl-0 mr-2 ml-md-4 font-wei  border px-2 mr-2 rounded-lg'>
-							<Link to='/' className=' font-wei'>
+						<div className='navbar-brand mt-1 pl-0 mr-2 ml-md-4 font-wei border  px-2 mr-2 rounded-lg'>
+							<Link to='/' className=' font-wei px-1  text-danger'>
 								Bετα Νεws
 							</Link>
 						</div>
@@ -133,9 +133,9 @@ class Nav extends Component {
 						
 						*/}
 
-						<span className='rounded-pill'>
+						<span className='rounded-pill '>
 							<li onClick={this.Collapsed.bind(this)}
-								className='lg-hidden fa fa-align-right text-danger collaspsed '
+								className='lg-hidden   py-2 rounded-lg icofont-navigation-menu   gh collaspsed '
 							>
 							</li>
 						</span>

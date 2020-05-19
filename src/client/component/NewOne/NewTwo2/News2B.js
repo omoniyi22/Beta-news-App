@@ -43,7 +43,7 @@ class News2B extends Component {
 							post !== undefined && (
 								<Link to={`/post/${post.type + '+' + post._id}`} >
 
-									<div className='News2BTabRecent mt-3 border py-3 px-3 rounded-well'>
+									<div className='News2BTabRecent mt-0  py-2 rounded-well'>
 										<div
 											className='News2BTabPix mr-3 border rounded-lg'
 											style={{
@@ -72,7 +72,7 @@ class News2B extends Component {
 							post !== undefined && (
 								<Link to={`/post/${post.type + '+' + post._id}`} >
 
-									<div className='News2BTabRecent mt-3'>
+									<div className='News2BTabRecent mt-0 py-2'>
 										<div
 											className='News2BTabPix border rounded-lg mr-3'
 											style={{
@@ -84,8 +84,10 @@ class News2B extends Component {
 											<div className='News2BTabTitle text-left pt-1 '>
 												<div className='News2BTabTopic  news2Text black-text'>{post.title}</div>
 												<div className='News2BTabDate small mt-1 font-weight-light'>
-													<span className='fa fa-calendar-day mr-1' />  <Moment calendar>{post.date}</Moment>
-
+													<span className='fa fa-calendar-day mr-1 tsm' />
+													<span className="tsm">
+														<Moment calendar>{post.date}</Moment>
+													</span>
 												</div>
 											</div>
 										</Link>
@@ -95,12 +97,13 @@ class News2B extends Component {
 						))}
 					</div>
 
+
 					<div className='tab-pane fade' id='bus'>
 						{this.props.politics.map(post => (
 							post !== undefined && (
 								<Link to={`/post/${post.type + '+' + post._id}`} >
 
-									<div className='News2BTabRecent mt-3'>
+									<div className='News2BTabRecent mt-0 py-2'>
 										<div
 											className='News2BTabPix mr-3 border rounded-lg'
 											style={{
@@ -112,8 +115,10 @@ class News2B extends Component {
 											<div className='News2BTabTitle text-left pt-1 '>
 												<div className='News2BTabTopic  news2Text black-text'>{post.title}</div>
 												<div className='News2BTabDate small mt-1 font-weight-light'>
-													<span className='fa fa-calendar-day mr-1' />  <Moment calendar>{post.date}</Moment>
-
+													<span className='fa fa-calendar-day mr-1 tsm' />
+													<span className='tsm'>
+														<Moment calendar>{post.date}</Moment>
+													</span>
 												</div>
 											</div>
 										</Link>

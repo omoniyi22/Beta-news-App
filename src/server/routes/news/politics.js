@@ -30,14 +30,33 @@ router.post('/politics/comment/:id', (req, res) => {
     politicsDB.findById(req.params.id)
         .then(post => {
             const { user, value } = req.body
-            if (value) {
+            if (value && user) {
                 post.comments = [{
-                    "users": user,
-                    "value": value,
+                    user,
+                    value,
                     "date": Date()
                 }, ...post.comments]
                 post.save()
-                    .then(() => res.json(post))
+                    .then(() => res.json({
+                        user,
+                        value,
+                        "date": Date()
+                    }))
+                    .catch(err => {
+                        res.status(400).json(err)
+                    })
+            } else if (!user && value) {
+                post.comments = [{
+                    "user": "Anonymous",
+                    value,
+                    "date": Date()
+                }, ...post.comments]
+                post.save()
+                    .then(() => res.json({
+                        "user": "Anonymous",
+                        value,
+                        "date": Date()
+                    }))
                     .catch(err => {
                         res.status(400).json(err)
                     })
@@ -53,14 +72,4 @@ router.post('/politics/comment/:id', (req, res) => {
 })
 
 
-//Search Post
-router.get('/news/:search', (req, res) => {
-    // let Search = [...new Set(politics)]
-    Search = Search.filter(search => new RegExp(req.params.search, 'i').test(search.title))
-    let searchEntertainment = [...new Set(entertainment)]
-    searchEntertainment = searchEntertainment.filter(search => new RegExp(req.params.search, 'i').test(search.title))
-    Search = [searchEntertainment, Search]
-    Search = [].concat.apply([], Search)
-    res.json(Search)
-})
 module.exports = router

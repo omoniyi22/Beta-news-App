@@ -1,7 +1,12 @@
-import { FETCH_POSTS, FINANCE_POSTS, ENTERTAINMENT_POSTS, SCI_POSTS, SPORT_POSTS, FOREIGN_POSTS, DELETE_POST, FETCH_MESSAGES, SINGLE_MESSAGE, CHANGE_NAV, POST_POST, EDIT_POST } from "./type";
+import { FETCH_POSTS, COMMENT, FINANCE_POSTS, ENTERTAINMENT_POSTS, SCI_POSTS, SPORT_POSTS, FOREIGN_POSTS, DELETE_POST, FETCH_MESSAGES, SINGLE_MESSAGE, CHANGE_NAV, POST_POST, EDIT_POST } from "./type";
 import { storage } from '../../firebase/index'
 import axios from 'axios';
 import { async } from "q";
+
+
+
+
+
 
 
 export const entertainmentPosts = () => dispatch => {
@@ -84,7 +89,22 @@ export const sciPosts = () => dispatch => {
             });
         }
         );
-    // console.log(pol)
+}
+
+
+export const Comment = (men) => dispass => {
+    axios.post(`/news/${men[0]}/comment/${men[1]}`, {
+        user: men[2],
+        value: men[3]
+    }).then(res => res.data)
+        .then(resp => {
+            console.log(resp)
+            return dispass({
+                type: COMMENT,
+                payload: resp
+            });
+        });
+
 }
 
 
@@ -139,6 +159,8 @@ export const upload = post => {
 
     // })
 }
+
+
 
 export const changeNav = nav => async dispatch => {
     await dispatch({

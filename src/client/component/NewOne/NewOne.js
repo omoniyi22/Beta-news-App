@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './NewOne.css';
 import NewsTwo1 from './NewTwo1';
 import NewsOne1 from './newsOne1';
@@ -15,37 +15,52 @@ import Nav from './../Nav/Nav'
 import Footer from './../Footer/Footer'
 import { Switch, Route } from 'react-router-dom';
 import SinglePost from './../singlePost/singlePost';
+function top() {
+	window.pageYOffset = 0
+	document.body.scrollTop = 0
+	document.documentElement.scrollTop = 0
+}
 
 
-
-function Row() {
-	return (
-		<div className='container-fliud'>
-			<div className='row mb-4'>
-				<NewsOne2 />
-				<NewsOne1 />
-				<NewsOne3 />
+class Row extends Component {
+	componentWillMount() {
+		top();
+	}
+	render() {
+		return (
+			<div className='container-fliud'>
+				<div className='row mb-4'>
+					<NewsOne2 />
+					<NewsOne1 />
+					<NewsOne3 />
+				</div>
+				<div className='row'>
+					<NewsTwo1 />
+					<NewTwo2 />
+				</div>
 			</div>
-			<div className='row'>
-				<NewsTwo1 />
-				<NewTwo2 />
-			</div>
-		</div>
-	);
+		);
+	}
 }
 function Row2(props) {
+	top();
 	return (
 		<div className='container-fliud'>
-			<div className='row px-3'>
+			<div className='row '>
 				<SinglePost
 					prod={props.match.params.id}
 				/>
 				<NewTwo2 />
 			</div>
+			<div className='row'>
+
+			</div>
 		</div>
 	);
 }
 function ContactRow() {
+	top();
+
 	return (
 		<div className='container-fliud'>
 			<div className='row'>
@@ -55,16 +70,20 @@ function ContactRow() {
 	);
 }
 function AdvertRow() {
+	top();
 	return (
 		<div className='container-fliud'>
 			<div className='row'>
 				<Advert />
+			</div>
+			<div className='row'>
 				<NewTwo2 />
 			</div>
 		</div>
 	);
 }
 function SignUp() {
+	top();
 	return (
 		<div className='container-fliud'>
 			<div className='row'>
@@ -74,6 +93,7 @@ function SignUp() {
 	);
 }
 function SignInRow() {
+	top();
 	return (
 		<div className='container-fliud'>
 			<div className='row'>
@@ -83,6 +103,7 @@ function SignInRow() {
 	);
 }
 function Adminx() {
+	top();
 	return (
 		<div className='container-fliud'>
 			<div className='row'>
@@ -92,6 +113,7 @@ function Adminx() {
 	);
 }
 function Post() {
+	top();
 	return (
 		<div className='container-fliud'>
 			<div className='row '>
@@ -111,6 +133,8 @@ class NewOne extends React.Component {
 
 
 	render() {
+		window.addEventListener("load", function () { top(); });
+
 		return (
 			<div>
 				<div className="broro">

@@ -20,7 +20,7 @@ class Advert extends React.Component {
 							<span className='fa fa-home' /> Home / Bετα / Advertise
 						</div>
 						<div className='author badge blue z-depth-0 mt-2'>{'BETA NEWS'}</div>
-						<div className='title mt-2 h2'>Advertise Your Product</div>
+						<div className='title mt-2 h4'>Advertise Your Product</div>
 
 						<div className='news details'>
 							<div className='float-left'>
@@ -34,7 +34,7 @@ class Advert extends React.Component {
 							</span>
 						</div>
 					</div>
-					<img src={ads} className='w-100  mt-3 px-0 border text-center POST_IMG' alt='POST_IMG' />
+					<img src={ads} className='w-100  mt-3 px-0 border text-center' alt='POST_IMG' />
 					<div className='content col-12 py-3 px-1 jumbotron'>
 						<div className='card px-3 mx-1 my-2 py-4  Clist '>
 							Advertise with Hettyosblog.com, the first mixed niche news website from a Nigerian woman’s

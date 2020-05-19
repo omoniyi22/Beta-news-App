@@ -7,7 +7,7 @@ var finance = require('./../../models/News/finance')
 var sport = require('./../../models/News/sport')
 var science = require('./../../models/News/sci')
 
-router.get('/main', (req, res) => {
+router.get('/main/:search', (req, res) => {
     const user = async () => {
         try {
             await entertainment.find().sort({ id: -1 })
@@ -49,6 +49,7 @@ router.get('/main', (req, res) => {
                                                                     }
                                                                 }
                                                             }
+                                                            p = p.filter(search => new RegExp(req.params.search, 'i').test(search.title))
                                                             res.json(p)
                                                         })
                                                 })
@@ -63,8 +64,22 @@ router.get('/main', (req, res) => {
     user()
 })
 
-router.get('/search/:id', (req, res) => {
-})
+// router.get('/search/:id', (req, res) => {
+
+
+//     //Search Post
+//     router.get('/news/:search', (req, res) => {
+//         // let Search = [...new Set(politics)]
+//         Search = Search.filter(search => new RegExp(req.params.search, 'i').test(search.title))
+//         let searchEntertainment = [...new Set(entertainment)]
+//         searchEntertainment = searchEntertainment.filter(search => new RegExp(req.params.search, 'i').test(search.title))
+//         Search = [searchEntertainment, Search]
+//         Search = [].concat.apply([], Search)
+//         res.json(Search)
+//     })
+//     module.exports = router
+
+// })
 
 
 module.exports = router
