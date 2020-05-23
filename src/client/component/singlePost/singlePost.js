@@ -142,7 +142,7 @@ class Row2 extends React.Component {
 												<span className='fab fa-linkedin text-success fa-sm  mx-1 p-1' />
 											</div>
 											<div style={{
-												backgroundImage: `url(${"http://localhost:3001/pot.jpg"})`,
+												backgroundImage: `url(${post.picture})`,
 												backgroundSize: '100% 117%',
 											}} className=' border text-center mx-auto POST_IMG w-100 mb-sm-3 mb-md-4 ' alt='POST_IMG' />									<div className='content ssk col-12 px-sm-2 px-md-3 mt-sm-3 mt-md-3 py-md-1 '>
 												{renderHTML(post.content)}
