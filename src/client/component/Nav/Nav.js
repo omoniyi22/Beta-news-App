@@ -2,20 +2,29 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import SmallNav from './SmallNav'
+import { searched } from './../../Actions/postActions'
+// import Search from './../searches/search'
+import Result from './../searches/result'
 import App from './../../App';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux'
 import './Nav.css';
+import { stat } from 'fs';
 const icon = require('./icon.png');
 
+// let count
 class Nav extends Component {
 	constructor() {
 		super()
 		this.state = {
 			first_name: "",
 			last_name: "",
-			collapse: true
+			collapse: true,
+			togsearch: true,
+			s_input: '',
+			l_input: ''
 		}
 	}
-
 	async componentDidMount() {
 		const token = await localStorage.usertoken
 		if (token === undefined) {
@@ -32,11 +41,21 @@ class Nav extends Component {
 		}
 	}
 
-
 	Collapsed() {
 		this.setState(prevState => {
 			return {
 				collapse: !prevState.collapse
+			};
+		});
+	}
+	onChange(e) {
+		this.setState({ [e.target.name]: e.target.value.toLowerCase() })
+	}
+
+	Togsearch() {
+		this.setState(prevState => {
+			return {
+				togsearch: !prevState.togsearch
 			};
 		});
 	}
@@ -49,6 +68,9 @@ class Nav extends Component {
 		localStorage.removeItem('usertoken');
 		this.props.history.push('/');
 		console.log(this.state.first_name);
+	}
+	componentWillReceiveProps() {
+		console.log(this.props.search)
 	}
 	render() {
 		const DSignOut = (
@@ -73,18 +95,55 @@ class Nav extends Component {
 			<div className='border-bottom pb-0 peach z-depth-1'>
 				<div className='navbar navbar py-1  border-bottom mt-0 z-depth-0'>
 					<div className='navbar-header pull-right h4-responsive mx-0'>
-						<div className='navbar-brand mt-1 pl-0 mr-2 ml-md-4 font-wei border  px-2 mr-2 rounded-lg'>
-							<Link to='/' className=' font-wei px-1  text-danger'>
+						<div className='navbar-brand sm-hidden mt-1 pl-0 mr-2 ml-md-4 font-wei border border-white  px-2 mr-2 rounded-lg'>
+							<Link to='/' className=' font-wei px-1 sm-hidden   text-danger'>
 								Bετα Νεws
 							</Link>
+
+						</div>
+						{this.state.togsearch ?
+
+							<div className='navbar-brand mt-1 pl-0 mr-2 lg-hidden ml-md-4 font-wei border border-white  px-2 mr-2 rounded-lg'>
+								<Link to='/' className=' font-wei px-1  text-danger'>
+									Bετα Νεws
+							</Link>
+
+							</div>
+							: null}
+						{/* <div class="  float-right sm-hidden  py-0 mx-0">
+							<div class="nav-item  py-0   ">
+								<input className="form-control ssa input-group py-0  float-left border-0 " />
+								<div class="input-group-addon  eje white black-text  float-left pt-1 ">
+
+									<div className="fa fa-search  px-2 text-danger" />
+								</div>
+							</div>
+						</div> */}
+						<div class="md-form my-0 float-right sm-hidden">
+							<div className="input-group mt-2">
+								<input placeholder="..search" type="text" class=" my-0" id="recipient-name" name="l_input" value={this.state.l_input}
+									onChange={this.onChange.bind(this)} />
+								<span class="input-group-addon    black-text   pt-1 " >
+									<span className="fa icofont-search gh  px-1 text-danger" />
+								</span>
+							</div>
 						</div>
 					</div>
-
+					{!this.state.togsearch &&
+						<div class="md-form my-0 float-right lg-hidden">
+							<div className="input-group mt-2">
+								<input placeholder="..search" type="text" class=" my-0" id="recipient-name"
+									name="s_input" value={this.state.s_input}
+									onChange={this.onChange.bind(this)}
+								/>
+							</div>
+						</div>
+					}
 					<ul className=' nav nav-tab z-depth-0 navbar-right navbar navbar-dark'>
 						<li className='sm-hidden '>
 							<Link
 								to='/Advert'
-								className='rounded-pill sm-hidden ml-0 mx-2 px-3 desk-link img-thumbmail img img-thumbnail desk-link'>
+								className='rounded-pill sm-hidden ml-0 mr-2 px-3 desk-link img-thumbmail img img-thumbnail desk-link'>
 								{' '}
 								Place Ads{' '}
 							</Link>
@@ -98,6 +157,7 @@ class Nav extends Component {
 							</Link>
 						</li>
 						<li className='sm-hidden  ' />
+
 						<li className='sm-hidden '>
 
 							{localStorage.usertoken ? DSignOut :
@@ -133,11 +193,40 @@ class Nav extends Component {
 						
 						*/}
 
-						<span className='rounded-pill '>
-							<li onClick={this.Collapsed.bind(this)}
-								className='lg-hidden   py-2 rounded-lg icofont-navigation-menu   gh collaspsed '
+						<span className='rounded-pill  '>
+							<div class="md-form my-0 float-right lg-hidden dst">
+								<div className="input-group mt-0">
+									<span class="input-group-addon    black-text   pt-1 ">
+										{this.state.togsearch ?
+											<span className="fa icofont-search gh  px-1 text-danger " onClick={this.Togsearch.bind(this)} />
+											:
+											<span className="fa icofont-search gh  px-1 text-danger " onClick={() => {
+												if (this.state.s_input != '') {
+													this.props.searched(this.state.s_input)
+													this.setState({
+														s_input: ""
+													})
+												}
+											}} />
+
+										}
+									</span>
+								</div>
+							</div>
+
+
+						</span>
+
+						<span className='rounded-pill ml-2 '>
+
+							{this.state.togsearch ? <li onClick={this.Collapsed.bind(this)}
+								className='lg-hidden  ml-2 py-2 rounded-lg icofont-navigation-menu font-weight-light   gh collaspsed '
 							>
 							</li>
+								: <li onClick={this.Togsearch.bind(this)}
+									className='lg-hidden   py-2 rounded-lg fa fa-times fa-lg   text-danger collaspsed '
+								>
+								</li>}
 						</span>
 					</ul>
 				</div>
@@ -145,8 +234,31 @@ class Nav extends Component {
 				{!this.state.collapse &&
 					<SmallNav fun={this.Collapsed.bind(this)} />
 				}
+
+				{!this.state.togsearch &&
+					<div className="mobile-naav z-depth-0  position-fixed  mr-2 mt-0" >
+						<nav class="nav-menu navsmeu z-depth-0 d-lg-block">
+							<nav class="navbar navbar-light whiteout navbar-1 z-depth-0  ">
+								<div class="navbar-collapse  " id="navbarSupportedContent15">
+									<ul class="navbar-nav mr-auto  z-depth-0 border-bottom ">
+										<Result fun={this.Togsearch.bind(this)} />
+									</ul>
+									<ul class="navbar-nav mr-auto px-2  text-center z-depth-0 border-bottom ">
+										klkflsfsl
+									</ul>
+								</div>
+							</nav>
+						</nav>
+					</div>
+					// <Search fun={this.Togsearch.bind(this)} />
+				}
 			</div>
 		);
 	}
 }
-export default withRouter(Nav);
+
+// var mapStatetoProps = state => ({
+// 	search: state.posts.search
+// });
+
+export default connect(null, { searched })(withRouter(Nav));

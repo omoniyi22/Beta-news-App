@@ -1,4 +1,4 @@
-import { FETCH_POSTS, COMMENT, FINANCE_POSTS, ENTERTAINMENT_POSTS, SCI_POSTS, SPORT_POSTS, FOREIGN_POSTS, DELETE_POST, FETCH_MESSAGES, SINGLE_MESSAGE, CHANGE_NAV, POST_POST, EDIT_POST } from "./type";
+import { FETCH_POSTS, NEXT_SEARCH, SEARCH, COMMENT, SINGLEPOST, FINANCE_POSTS, ENTERTAINMENT_POSTS, SCI_POSTS, SPORT_POSTS, FOREIGN_POSTS, DELETE_POST, FETCH_MESSAGES, SINGLE_MESSAGE, CHANGE_NAV, POST_POST, EDIT_POST } from "./type";
 import { storage } from '../../firebase/index'
 import axios from 'axios';
 import { async } from "q";
@@ -8,6 +8,37 @@ import { async } from "q";
 
 
 
+export const searched = (searsh) => dispatch => {
+    let url = `/news/main/${searsh}`
+    axios(url).then(res => {
+        dispatch({
+            type: SEARCH,
+            payload: res.data
+        })
+    })
+}
+
+export const controller = (searsh) => dispatch => {
+    let url = `/news/main/search/${searsh}`
+    axios(url).then(res => {
+        dispatch({
+            type: NEXT_SEARCH,
+            payload: res.data
+        })
+    })
+}
+
+export const singlePost = (ur) => dispatch => {
+    let url = ur
+    console.log(url)
+    axios(url).then(res => {
+        console.log(res)
+        dispatch({
+            type: SINGLEPOST,
+            payload: [res.data]
+        })
+    })
+}
 
 export const entertainmentPosts = () => dispatch => {
     let pol = [];
@@ -80,7 +111,7 @@ export const foreignPosts = () => dispatch => {
 }
 export const sciPosts = () => dispatch => {
     let pol = [];
-    return fetch('/news/science')
+    fetch('/news/science')
         .then(res => res.json())
         .then(politics => {
             dispatch({
@@ -95,7 +126,8 @@ export const sciPosts = () => dispatch => {
 export const Comment = (men) => dispass => {
     axios.post(`/news/${men[0]}/comment/${men[1]}`, {
         user: men[2],
-        value: men[3]
+        value: men[3],
+        date: Date()
     }).then(res => res.data)
         .then(resp => {
             console.log(resp)

@@ -14,7 +14,7 @@ import Posts from './../Admin/Post/Posts';
 import Nav from './../Nav/Nav'
 import Footer from './../Footer/Footer'
 import { Switch, Route } from 'react-router-dom';
-import SinglePost from './../singlePost/singlePost';
+import Row2 from './../singlePost/singlePost';
 function top() {
 	window.pageYOffset = 0
 	document.body.scrollTop = 0
@@ -42,22 +42,7 @@ class Row extends Component {
 		);
 	}
 }
-function Row2(props) {
-	top();
-	return (
-		<div className='container-fliud'>
-			<div className='row '>
-				<SinglePost
-					prod={props.match.params.id}
-				/>
-				<NewTwo2 />
-			</div>
-			<div className='row'>
 
-			</div>
-		</div>
-	);
-}
 function ContactRow() {
 	top();
 

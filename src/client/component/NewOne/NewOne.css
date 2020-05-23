@@ -75,6 +75,7 @@
 @media screen and (max-width: 900px) {
 	.app {
 		margin: 0 1px !important;
+		margin-top: -1px !important;
 	}
 	.col-md-6 {
 		width: 100% !important;
@@ -121,12 +122,12 @@
 		color: rgba(0, 0, 0, 0.809);
 		font-weight: 100;
 		font-family: obu;
-		background: rgba(209, 209, 209, 0.082);
+		background: rgba(199, 192, 192, 0.108);
 		
 	}
 	.newsOne2 {
 		min-width: 100% !important;
-		height: 250px;
+		height: 244px;
 	}
 	.newsOne2 .newsIconNews {
 		height: 212px !important;

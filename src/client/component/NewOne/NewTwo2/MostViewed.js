@@ -49,43 +49,44 @@ class MostViewed extends Component {
   }
   render() {
     return (
-      <div className="MostViewed mx-0 mt-o">
+      <div className="MostViewed mx-auto mt-o">
         <div className="w-100 mb-3 px-auto text-center ">
           <span className="MVheader  mx-auto gid font-weight-bold ">
             Most Viewed Headlines
         </span>
         </div>
-        <div className="border-bottom mb-3">
+        <div className="border-bottom pb-3 white z-depth-1">
         </div>
-        {this.state.p.map(post => (
-          post !== undefined && (
-            <Link to={`/post/${post.type + '+' + post._id}`} className="black-text  ">
+        <div className="white w-100 gbomi z-depth-1-half">
+          {this.state.p.map(post => (
+            post !== undefined && (
+              <Link to={`/post/${post.type + '+' + post._id}`} className="black-text  w-100">
 
 
-              <div className="MV1 pt-2  pb-3 my-0  bn-md px-md-1 border-bottom">
-                <div className="mvlink font-weight-light   mt-2  ">
-                  <div className="mvtitle">{post.title}</div>
-                  <div className="mvdate mt-2">
-                    <span className="fa fa-clock fa-md mr-2 tsm" />
-                    <span className="tsm ">
-                      <Moment calendar>{post.date}</Moment>
-                    </span>
+                <div className="MV1 pt-2  pb-3 my-0   px-md-2 px-sm-3 border-bottom ">
+                  <div className="mvlink ml-2 ml-md-1 font-weight-light   mt-2  ">
+                    <div className="mvtitle">{post.title}</div>
+                    <div className="mvdate mt-2">
+                      <span className="fa fa-clock fa-md mr-2 tsm" />
+                      <span className="tsm ">
+                        <Moment calendar>{post.date}</Moment>
+                      </span>
+                    </div>
+                  </div>
+                  <div className="picoi ">
+                    <div
+                      className='News2BTabPix   border mr-1 rounded-lg'
+                      style={{
+                        backgroundImage: `url(${"http://localhost:3001/pot.jpg"})`,
+                        backgroundSize: '100% 100%',
+                      }}
+                    />
                   </div>
                 </div>
-                <div className="picoi ">
-                  <div
-                    className='News2BTabPix   border  rounded-lg'
-                    style={{
-                      backgroundImage: `url(${post.picture})`,
-                      backgroundSize: '100% 100%',
-                    }}
-                  />
-                </div>
-              </div>
-            </Link>
-          )
-        ))}
-        {/* <div className="MV1 pt-3 mt-2 pb-3 border-bottom">
+              </Link>
+            )
+          ))}
+          {/* <div className="MV1 pt-3 mt-2 pb-3 border-bottom">
           <div className="mvlink font-weight-light  ml-2 mr-3 mt-2 ">
             <div className="mvtitle">Women before Yoy Quit Listen to Tomi</div>
             <div className="mvdate">
@@ -104,6 +105,7 @@ class MostViewed extends Component {
           </div>
         </div> */}
 
+        </div>
       </div>
     );
   }

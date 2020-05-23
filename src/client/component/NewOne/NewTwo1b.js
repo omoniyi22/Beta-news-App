@@ -53,8 +53,8 @@ class NewTwo1b extends Component {
 	}
 	render() {
 		return (
-			<div className='row  my-4 p-3 '>
-				<div className='col-12 pl-2  mb-4'>
+			<div className='row  my-4 p-3 mt-5'>
+				<div className='col-12 pl-2  mb-4 mt-5'>
 					<span className='font-weight-bold fa fa-bookmark brubk fa-3x mr-2 ' />
 					<span className='ml-2 gid'>Top Stories</span>
 				</div>
@@ -71,7 +71,7 @@ class NewTwo1b extends Component {
 										className='col-md-6 mx-0   NewTwo1bpix'
 										style={{
 											backgroundImage: `url(${post.picture})`,
-											backgroundSize: '100% 100%',
+											backgroundSize: 'cover',
 										}}>
 										<span class='border rounded-circle px-2 py-1 ml-0 mdb-color lighten-4 strike strike2 fa fa-bolt position-absolute' />
 

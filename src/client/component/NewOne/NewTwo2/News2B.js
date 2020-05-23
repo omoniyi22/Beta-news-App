@@ -30,24 +30,24 @@ class News2B extends Component {
 							Sport
 					</a>
 					</li>
-					<li className='active col-4 text-center  py-3 border-right border-bottom'>
+					<li className='active col-4 text-center  py-3 border-bottom'>
 						<a href='#bus' data-toggle='tab' className='text-uppercase small text-danger'>
 							Business
 					</a>
 					</li>
 				</ul>
 
-				<div id='myTabContent' className='tab-content pb-3'>
-					<div className='tab-pane  in active' id='enter'>
+				<div id='myTabContent' className='tab-content pb-3  row codd cdds  px-2 z-depth-1'>
+					<div className='tab-pane  in active w-100' id='enter'>
 						{this.props.entertainment.map(post => (
 							post !== undefined && (
-								<Link to={`/post/${post.type + '+' + post._id}`} >
+								<Link to={`/post/${post.type + '+' + post._id}`}  >
 
-									<div className='News2BTabRecent mt-0  py-2 rounded-well'>
+									<div className='News2BTabRecent mt-0  py-2   border-bottom w-100'>
 										<div
 											className='News2BTabPix mr-3 border rounded-lg'
 											style={{
-												backgroundImage: `url(${post.picture})`,
+												backgroundImage: `url(${"http://localhost:3001/pot.jpg"})`,
 												backgroundSize: '100% 100%',
 											}}
 										/>
@@ -105,7 +105,7 @@ class News2B extends Component {
 
 									<div className='News2BTabRecent mt-0 py-2'>
 										<div
-											className='News2BTabPix mr-3 border rounded-lg'
+											y className='News2BTabPix mr-3 border rounded-lg'
 											style={{
 												backgroundImage: `url(${post.picture})`,
 												backgroundSize: '100% 100%',

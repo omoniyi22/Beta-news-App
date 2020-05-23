@@ -5,9 +5,13 @@
 .share-link {
 	font-size: 32px !important;
 }
+.rolle{
+	margin-left: -18px;
+	margin-right: -18px;
+}
 .POST_IMG {
-	margin-right: 14px !important;
-	margin-left: 14px !important;
+	margin-right: auto !important;
+	margin-left: auto !important;
 	height: 60vh;
 	width: 100vw !important;
 }

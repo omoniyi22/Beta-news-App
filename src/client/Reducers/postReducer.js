@@ -1,4 +1,4 @@
-import { FETCH_POSTS, COMMENT, FINANCE_POSTS, ENTERTAINMENT_POSTS, SCI_POSTS, SPORT_POSTS, FOREIGN_POSTS, POST_POST, DELETE_POST, EDIT_POST, SINGLE_MESSAGE, CHANGE_NAV, FETCH_MESSAGES } from "../Actions/type";
+import { FETCH_POSTS, SEARCH, NEXT_SEARCH, COMMENT, FINANCE_POSTS, SINGLEPOST, ENTERTAINMENT_POSTS, SCI_POSTS, SPORT_POSTS, FOREIGN_POSTS, POST_POST, DELETE_POST, EDIT_POST, SINGLE_MESSAGE, CHANGE_NAV, FETCH_MESSAGES } from "../Actions/type";
 import { stat } from "fs";
 import Nav from "../component/Nav/Nav";
 
@@ -15,16 +15,34 @@ let initialState = {
     edit: {},
     message: {},
     comment: {},
+    sp: [],
+    search: [],
     nav: ""
 }
 
 export default function (state = initialState, action) {
     switch (action.type) {
+        case SEARCH:
+            return {
+                ...state,
+                search: action.payload
+            }
+        case NEXT_SEARCH:
+            return {
+                ...state,
+                search: action.payload
+            }
         case FETCH_POSTS:
             // console.log('fetching')
             return {
                 ...state,
                 items: action.payload
+            }
+        case SINGLEPOST:
+            // console.log('fetching')
+            return {
+                ...state,
+                sp: action.payload
             }
         case FINANCE_POSTS:
             // console.log('fetching')
@@ -62,7 +80,7 @@ export default function (state = initialState, action) {
                 sport: action.payload
             }
         case COMMENT:
-            console.log(action.payload)
+            // console.log(action.payload)
             return {
                 ...state,
                 comment: action.payload

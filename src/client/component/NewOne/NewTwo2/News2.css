@@ -17,6 +17,18 @@
 	height: 72px;
 	width: 110px;
 }
+.cdds{
+	margin-right:-17px !important;
+	margin-left:-17px !important;
+	background: rgb(255, 255, 255);
+}
+.News2BTabRecent{
+	width: 100% !important;
+}
+.MostViewed{
+	margin-right: -17px !important;
+	margin-left: -17px !important;
+}
 .MV1 {
 	display: flex !important;
 }
@@ -70,6 +82,9 @@ align-self: flex-end;
 
 .newsletter-Sub {
 	font-size: 17px !important;
+}
+.tab-content{
+	
 }
 
 .newsletter-form .input-group {

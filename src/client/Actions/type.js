@@ -14,6 +14,9 @@ export const SINGLE_MESSAGE = 'SINGLE_MESSAGE';
 export const POST_POST = 'POST_POST'
 export const CHANGE_NAV = 'CHANGE_NAV'
 export const COMMENT = 'COMMENT'
+export const SEARCH = "SEARCH"
+export const SINGLEPOST = 'SINGLEPOST'
+export const NEXT_SEARCH = 'NEXT_SEARCH'
 
 
 

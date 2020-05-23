@@ -92,7 +92,7 @@ constructor(){
 							post !== undefined && (
 						<Link to={`/post/${post.type + '+' + post._id}`} >
 								
-								<div className=' news2'>
+								<div className=' news2 border my-1 p-2 rounded'>
 								<div
 									className='newsTwoIconPix'
 									style={{
@@ -124,25 +124,22 @@ constructor(){
 						{this.props.po.map(post => (
 							post !== undefined && (
 								
-								<div className='col-lg-6 grey  newsTwoIcon pr-3' style={{ backgroundImage: `url(${post.picture})` ,  backgroundSize: '100% 150%', backgroundRepeat: 'no-repeat', backgroundOrigin: 'contentBox' }}>
-																<Link to={`/post/${post.type + '+' + post._id}`}>
-
+								<div className='col-lg-6 grey  newsTwoIcon pr-3 mx-sm-0' style={{ backgroundImage: `url(${post.picture})` ,  backgroundSize: '100% 150%', backgroundRepeat: 'no-repeat', backgroundOrigin: 'contentBox' }}>
+							<Link to={`/post/${post.type + '+' + post._id}`}>
 							<div className='news-flex blue'>
+
 								<div className='newstwocontent'>
 									<span className=' px-2 py-1 mx-0 font-weight-light btn btn-sm z-depth-0 border white lighten-2'>
 										<span className='text-danger small'>{post.type}</span>
 									</span>
 									<br />
 									<div className='mt-2 h4 font-weight-light small capitalize'>{post.title}</div>
-									<div className='small font-weight-light'>
-										Betty New 
-										<span className="tsm">
-										 <Moment calendar>{post.date}</Moment>
-										 </span>
+									<div className='small font-weight-light tsm '>
+										Betty New bvs <Moment calendar>{post.date}</Moment>
 									</div>
 								</div>
 							</div>
-							</Link>
+								</Link>
 						</div>
 						)
 						))}
@@ -150,9 +147,9 @@ constructor(){
 						<div className='col-lg-6 newsTwoIcon ml-0 '>
 						{this.props.politics.map(post => (
 							post !== undefined && (
-						<Link to={`/post/${post.type + '+' + post._id}`} >
+								<Link to={`/post/${post.type + '+' + post._id}`} >
 								
-							<div className=' news2'>
+								<div className=' news2 border my-1 p-2 rounded'>
 								<div
 									className='newsTwoIconPix'
 									style={{
@@ -163,16 +160,16 @@ constructor(){
 								</div>
 								<div className='newsTwoIconText ml-3 '>
 									<div className='betatitle'>
-										<span className='fa fa-clock tsm' />{' '}
+										<span className='fa fa-clock tsm'/>{' '}
 										<span className='small bv tsm'><Moment calendar>{post.date}</Moment></span>
 									</div>
 									<Link to={`/post/${post.type + '+' + post._id}`}>
-
-									<div className='small news2Text black-text'>{post.description}</div>
+								<div className='small news2Text black-text'>{post.description}</div>
+								</Link>	
+								</div>
+								</div>
 								</Link>
-								</div>
-								</div>
-								</Link>)
+								)
 								))}
 						</div>
 						</div>
@@ -187,37 +184,32 @@ constructor(){
 						{this.props.fo.map(post => (
 							post !== undefined && (
 								
-								<div className='col-lg-6 grey  newsTwoIcon pr-3' style={{ backgroundImage: `url(${post.picture})` ,  backgroundSize: '100% 150%', backgroundRepeat: 'no-repeat', backgroundOrigin: 'contentBox' }}>
-									<Link to={`/post/${post.type + '+' + post._id}`} >
-							<div className='news-flex blue'>
-							<Link to={`/post/${post.type + '+' + post._id}`}>
-
-								<div className='newstwocontent'>
-									<span className=' px-2 py-1 mx-0 font-weight-light btn btn-sm z-depth-0 border white lighten-2'>
-										<span className='text-danger small'>{post.type}</span>
-									</span>
-									<br />
-									<div className='mt-2 h4 font-weight-light small capitalize'>{post.title}</div>
-									<div className='small font-weight-light'>
-										Betty New 
-										<span className="tsm">
-										 <Moment calendar>{post.date}</Moment>
-										 </span>
+								<div className='col-lg-6 grey  newsTwoIcon pr-3 mx-sm-0' style={{ backgroundImage: `url(${post.picture})` ,  backgroundSize: '100% 150%', backgroundRepeat: 'no-repeat', backgroundOrigin: 'contentBox' }}>
+								<Link to={`/post/${post.type + '+' + post._id}`}>
+								<div className='news-flex blue'>
+	
+									<div className='newstwocontent'>
+										<span className=' px-2 py-1 mx-0 font-weight-light btn btn-sm z-depth-0 border white lighten-2'>
+											<span className='text-danger small'>{post.type}</span>
+										</span>
+										<br />
+										<div className='mt-2 h4 font-weight-light small capitalize'>{post.title}</div>
+										<div className='small font-weight-light tsm '>
+											Betty New bvs <Moment calendar>{post.date}</Moment>
+										</div>
 									</div>
 								</div>
-								</Link>
+									</Link>
 							</div>
-						</Link>
-						</div>
 						)
 						))}
 
 						<div className='col-lg-6 newsTwoIcon ml-0 '>
 						{this.props.foreign.map(post => (
 							post !== undefined && (
-						<Link to={`/post/${post.type + '+' + post._id}`} >
+								<Link to={`/post/${post.type + '+' + post._id}`} >
 								
-							<div className=' news2'>
+								<div className=' news2 border my-1 p-2 rounded'>
 								<div
 									className='newsTwoIconPix'
 									style={{
@@ -228,13 +220,12 @@ constructor(){
 								</div>
 								<div className='newsTwoIconText ml-3 '>
 									<div className='betatitle'>
-										<span className='fa fa-clock tsm' />{' '}
-										<span className='small tsm bv bv'><Moment calendar>{post.date}</Moment></span>
+										<span className='fa fa-clock tsm'/>{' '}
+										<span className='small bv tsm'><Moment calendar>{post.date}</Moment></span>
 									</div>
 									<Link to={`/post/${post.type + '+' + post._id}`}>
-
-									<div className='small news2Text black-text'>{post.description}</div>
-								</Link>
+								<div className='small news2Text black-text'>{post.description}</div>
+								</Link>	
 								</div>
 								</div>
 								</Link>

@@ -32,11 +32,11 @@ router.post('/science/comment/:id', (req, res) => {
         .then(post => {
             const { user, value } = req.body
             if (value && user) {
-                post.comments = [{
+                post.comments = [...post.comments, {
                     user,
                     value,
                     "date": Date()
-                }, ...post.comments]
+                }]
                 post.save()
                     .then(() => res.json({
                         user,
@@ -47,11 +47,12 @@ router.post('/science/comment/:id', (req, res) => {
                         res.status(400).json(err)
                     })
             } else if (!user && value) {
-                post.comments = [{
-                    "user": "Anonymous",
-                    value,
-                    "date": Date()
-                }, ...post.comments]
+                post.comments = [
+                    ...post.comments, {
+                        "user": "Anonymous",
+                        value,
+                        "date": Date()
+                    }]
                 post.save()
                     .then(() => res.json({
                         "user": "Anonymous",

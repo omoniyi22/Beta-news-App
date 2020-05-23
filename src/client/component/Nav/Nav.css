@@ -1,6 +1,6 @@
 @media screen and (max-width: 720px) {
 	.sm-hidden {
-		display: none;
+		display: none !important;
 	}
 	.sm-visible {
 		display: block;
@@ -14,9 +14,58 @@
 		display: block;
 	}
 }
+/* .colaa{
+	min-width: 12px !important;
+} */
+div .ssa{
+	height: 34px;
+	margin-top: 3px;
+	padding-top: 3px !important;
+
+}
+.eje{
+	margin-top: 3px !important;
+	height: 33px;
+}
+.ssa{
+	height: 34px;
+	border-radius: 0em !important;
+	width: 188px !important;
+	max-width: 205px !important;
+}
+.ssa:valid:focus{
+	border-radius: 0em !important;
+	max-width: 205px !important;
+}
+.ssa input{
+	border-radius: 0em !important;
+	min-width: 90px !important;	
+}
+.ssa input:valid:focus{
+border: 0 !important;
+outline: 0 !important;
+}
+
+ .ssa span div{
+	border-radius: 0em !important;
+}
+/* .ssa span div{
+	border-radius: 0em !important;
+}
+.ssa span{
+	padding-top: auto !important;
+	padding-bottom: auto !important;
+	
+	height: 33px !important;
+
+	margin-top: 4px !important;
+	margin-bottom: 0em !important;
+	
+} */
 .gh{
 	font-size: 22px !important;
 	color: rgb(216, 69, 43);
+	font-weight: lighter !important;
 }
 .font-wei{
 	font-size: 14px;
@@ -75,7 +124,7 @@
 	cursor: pointer;
 }
 .peach {
-	background: rgb(237, 243, 241);
+	background: rgb(231, 233, 231);
 }
 .use {
 	border-radius: 50%;

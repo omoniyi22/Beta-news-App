@@ -15,7 +15,7 @@ class NewOne2 extends Component {
 			this.props.posts.map(post => (
 				post !== undefined && (
 
-					<div style={{ backgroundImage: `url(${post.picture})`, backgroundSize: '100% 150%', backgroundRepeat: 'no-repeat', backgroundOrigin: 'contentBox' }} className='col-md-6 px-0 pt-0 newsOne2 bn-md '>
+					<div style={{ backgroundImage: `url(${"http://localhost:3001/pot.jpg"})`, backgroundSize: '100% 150%', backgroundRepeat: 'no-repeat', backgroundOrigin: 'contentBox' }} className='col-md-6 px-0 pt-0 newsOne2 bn-md '>
 						<Link to={`/post/${post.type + '+' + post._id}`} >
 							<div className='badge z-depth-0 py-1 mt-0 mx-1 mb-2 red accent-1 font-weight-light text-capitalize tsm'>News - {post.type}</div>
 							<br />

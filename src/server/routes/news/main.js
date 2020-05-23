@@ -6,7 +6,23 @@ var foreign = require('./../../models/News/foreign')
 var finance = require('./../../models/News/finance')
 var sport = require('./../../models/News/sport')
 var science = require('./../../models/News/sci')
-
+let q = []
+let m
+let items
+function fola(p) {
+    let content = 20
+    items = Math.ceil(p.length / content)
+    let i = 0
+    let counts = 0
+    let j
+    let len = []
+    while (i < items) {
+        j = p.splice(0, content)
+        len.push(j)
+        i++
+    }
+    return (len)
+}
 router.get('/main/:search', (req, res) => {
     const user = async () => {
         try {
@@ -50,7 +66,13 @@ router.get('/main/:search', (req, res) => {
                                                                 }
                                                             }
                                                             p = p.filter(search => new RegExp(req.params.search, 'i').test(search.title))
-                                                            res.json(p)
+                                                            m = p.length
+                                                            q = fola(p)
+                                                            if (q.length > 0) {
+                                                                res.json([q, m, items])
+                                                            } else {
+                                                                res.json([[[]], "No result found", []])
+                                                            }
                                                         })
                                                 })
                                         })
@@ -63,10 +85,22 @@ router.get('/main/:search', (req, res) => {
     }
     user()
 })
+router.get('/main/search/:id', (req, res) => {
+    function we() {
+        if (req.params.id < q.length) {
+            res.json([[q[req.params.id]], m, items])
+        } else {
+            throw 'Not in range of the searched result'
+        }
+    }
+    try {
+        we()
+    } catch (err) {
+        res.json([[[]], "No result found", []])
+    }
+})
 
 // router.get('/search/:id', (req, res) => {
-
-
 //     //Search Post
 //     router.get('/news/:search', (req, res) => {
 //         // let Search = [...new Set(politics)]
