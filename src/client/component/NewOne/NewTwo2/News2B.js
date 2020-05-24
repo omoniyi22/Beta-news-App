@@ -138,3 +138,4 @@ const mapStateToProps = (state) => ({
 	sport: [state.posts.sport[10], state.posts.sport[11], state.posts.sport[12], state.posts.sport[13], state.posts.sport[14], state.posts.sport[15], state.posts.sport[16], state.posts.sport[17], state.posts.sport[18]]
 })
 export default connect(mapStateToProps, { fetchPosts, sportPosts, entertainmentPosts })(News2B)
+

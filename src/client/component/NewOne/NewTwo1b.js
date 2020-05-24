@@ -70,7 +70,7 @@ class NewTwo1b extends Component {
 									<div
 										className='col-md-6 mx-0   NewTwo1bpix rounded-well'
 										style={{
-											backgroundImage: `url(${'http://localhost:3001/a.jpg'})`,
+											backgroundImage: `url(${post.picture})`,
 											backgroundSize: 'cover',
 										}}>
 										<span class='border rounded-circle px-1 py-1 ml-0  white strike mt-1 strike2 icofont-fire-burn font-weight-bold position-absolute' />
