@@ -75,10 +75,10 @@ class MostViewed extends Component {
                   </div>
                   <div className="picoi ">
                     <div
-                      className='News2BTabPix   border mr-1 rounded-lg'
+                      className='News2BTabPix   border mr-2 rounded-lg'
                       style={{
-                        backgroundImage: `url(${"http://localhost:3001/pot.jpg"})`,
-                        backgroundSize: '100% 100%',
+                        backgroundImage: `url(${post.picture})`,
+                        backgroundSize: '100% 130%',
                       }}
                     />
                   </div>

@@ -2,23 +2,23 @@ const mongoose = require('mongoose');
 const ContactSchema = new mongoose.Schema({
     first_name: {
         type: String,
-        required: true
+
     },
     last_name: {
         type: String,
-        required: true
+
     },
     email: {
         type: String,
-        required: true
+
     },
     subject: {
         type: String,
-        required: true
+
     },
     message: {
         type: String,
-        required: true
+
     },
     read: {
         type: Boolean
@@ -29,7 +29,6 @@ const ContactSchema = new mongoose.Schema({
     },
     dot: {
         type: String,
-        required: true
     }
 });
 

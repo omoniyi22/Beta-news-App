@@ -7,6 +7,7 @@ import { Comment, singlePost } from './../../Actions/postActions'
 import NewTwo1b from './../NewOne/NewTwo1b'
 import NewsTwo2 from './../../component/NewOne/NewTwo2'
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom'
 import renderHTML from 'react-render-html'
 const ad = require('./imag.gif');
 // importfrom 'react-render-html'
@@ -112,11 +113,11 @@ class Row2 extends React.Component {
 							<div className='container-fliud my-sm-0'>
 								<div className='row my-sm-0'>
 									<div className='singlePost  col-md-8 px-3 mx-0 mt-0 pt-1 '>
-										<div className='Post row rolle white z-depth-1 py-md-3'>
+										<div className='Post row rolle mt-0 white z-depth-1-half py-md-3  py-sm-2'>
 											<div className='col-md-11  mx-0'>
 												<div className=' small  mx-0 mb-0 gia'>
 													{' '}
-													<span className='fa gia fa-home gia' /> Home / Bετα / <span className="text-capitalize gia">{post.type + this.state.prod} </span>News
+													<span className='fa gia fa-home gia' /> Home / Bετα / <span className="text-capitalize gia">{post.type} </span>News
 						</div>
 												<div className='news details px-0 my-0 py-0 '>
 
@@ -124,27 +125,38 @@ class Row2 extends React.Component {
 														<span className="mr-2 font-weight-light">
 															Bετα Nεws
 								</span>
-														<span className='fab fa-twitter mx-1' />
-														<span className='fa fa-envelope  ml-2 mr-3' />
-														<span className='fa fa-clock tsm' />
-														<span className="ml-1 small "><Moment calendar>{post.date}</Moment></span>
+
+														<a href={`https://twiter.com/share?=${window.location.href}&via=Omoniyi56312253&text=${post.title}`} target="_blank" className="black-text">
+
+															<span className='fab fa-twitter  loooe' /></a>
+														<a href="mailto:omoniyioluwaseun22@gmail.com">
+															<span><span className='fa fa-envelope loooe   ml-2 mr-3' /></span></a>
+														<span className='fa fa-clock tsm text-danger g' />
+														<span className="ml-1 small mb-1 "><Moment calendar>{post.date}</Moment></span>
 													</span>
 													<div className='title gia font-weight-light text-uppercase my-1 '>{post.title}</div>
-													<div className='text-capitalize ssk  small  mb-2 mt-2'>{post.description}</div>
+													<div className='text-capitalize ssk  small  mb-2 mt-md-2 mt-sm-1'>{post.description}</div>
 													<div className='float-right mt-2 text-danger'>
 														{post.views >= 50 && <> <span className='fa fa-eye' />post.views</>}
 													</div>
 												</div>
 											</div>
 											<div className='col-12 share-link text-center my-0 sm-hidden'>
-												<span className='fab fa-facebook text-primary fa-sm mx-1 p-1 ' />
-												<span className='fab fa-twitter text-primary fa-sm  mx-1 p-1' />
-												<span className='fab fa-linkedin text-success fa-sm  mx-1 p-1' />
+												<a href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}&t=${post.title}`} target="_blank" className="black-text">
+													<span className='fab fa-facebook text-primary fa-sm mx-1 p-1 ' /></a>
+												<a href={`whatsapp://send?text=${window.location.href + " " + post.title}`} target="_blank" className="black-text">
+													<span className='fab fa-whatsapp text-success fa-sm mx-1 p-1 ' /></a>
+												<a href={`https://twiter.com/share?=${window.location.href}&via=Omoniyi56312253&text=${post.title}`} target="_blank" className="black-text">
+
+													<span className='fab fa-twitter text-primary fa-sm  mx-1 p-1' />
+												</a>
+												<a href={`https://www.linkedin.com/shareArticle?url=${window.location.href}&title=${post.title}&summary=${post.description}&source=Beta_News`} className="black-text liker" target="_blank">
+													<span className='fab fa-linkedin text-success fa-sm liker mx-1 p-1' /></a>
 											</div>
 											<div style={{
 												backgroundImage: `url(${post.picture})`,
 												backgroundSize: '100% 117%',
-											}} className=' border text-center mx-auto POST_IMG w-100 mb-sm-3 mb-md-4 ' alt='POST_IMG' />									<div className='content ssk col-12 px-sm-2 px-md-3 mt-sm-3 mt-md-3 py-md-1 '>
+											}} className=' border text-center mx-auto POST_IMG w-100 mb-sm-3 mb-md-4 ' alt='POST_IMG' />									<div className='content ssks small col-12 px-sm-2 px-md-3 mt-sm-3 mt-md-3 py-md-1 '>
 												{renderHTML(post.content)}
 											</div>
 											<div className=' col-12  mt-4 mb-0 pb-0'>
@@ -155,47 +167,62 @@ class Row2 extends React.Component {
 													<button className='btn btn-md z-depth-0 m-0 blue-grey py-0 px-1 px-md-2 lighten-5 border-default border small'>
 														<span className=' fab fa-md fa-twitter small pr-1' />
 														<span className="small">
-
-															Twitter
-												</span>
+															<a href={`https://twiter.com/share?=${window.location.href}&via=Omoniyi56312253&text=${post.title}`} target="_blank" className="black-text">
+																Twitter
+															</a>
+														</span>
 													</button>
 													<button className='btn btn-md z-depth-0 mr-0 ml-1 blue-grey py-0 px-1 px-md-2 lighten-5 border-default border small'>
 														<span className=' fab fa-md fa-facebook pr-1 ' />
 														<span className="small">
-															Facebook
-												 </span>
+															<a href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}&t=${post.title}`} target="_blank" className="black-text">
+																Facebook
+															</a>
+														</span>
 													</button>
-													<button className='btn btn-md z-depth-0 mr-0 ml-1 blue-grey py-0 px-1 px-md-2 lighten-5 border-default border small'>
+													{/* <button className='btn btn-md z-depth-0 mr-0 ml-1 blue-grey py-0 px-1 px-md-2 lighten-5 border-default border small'>
 														<span className=' fab fa-md fa-linkedin pr-1' />
 														<span className="small">
 															LinkedIn
 												 </span>
-													</button>
+													</button> */}
 													<button className='btn btn-md z-depth-0 mr-0 ml-1 blue-grey py-0 px-1 px-md-2 lighten-5 border-default border small'>
 														<span className=' fab fa-md fa-whatsapp pr-1' />
-														<span className="small">
+														<span className="black-text small">
+															<a href={`whatsapp://send?text=${window.location.href + " " + post.title}`} target="_blank" className="black-text">
+																Whatsapp
+														</a>
+														</span>
 
-															Whatsapp
-												</span>
 													</button>
 													<button className='btn btn-md z-depth-0 mr-0 ml-1 blue-grey py-0 px-1 px-md-2 lighten-5 border-default border small'>
 														<span className=' fab fa-md fa-telegram pr-1' />
 														<span className="small">
-															Telegram
-												</span>
+															<a href={`https://telegram.me/share/url?url=${window.location.href}&text=${post.title}`} target="_blank" className="black-text">
+																Telegram
+															</a>
+														</span>
 													</button>
 												</div>
 											</div>{' '}
+
 										</div>
 										<div className='row shareNewPost border-top  mt-4 py-3 blue-grey lighten-5'>
 											<div className='col-12 text-center'>
-												<span className='float-left fa fa-share-alt small mt-1'> share</span>
+												<div className='float-left small mt-0 rounded-pill white px-2 mb-1 py-1 '>
+													<div className=" fa fa-share-alt "></div><div className="ml-1 float-right"> share</div></div>
 												<span className='text-center'>
-													<span className='fab fa-facebook fa-lg ' />
-													<span className='fab fa-twitter fa-lg ml-2' />
-													<span className='fab fa-linkedin fa-lg ml-2' />
-													<span className='fab fa-whatsapp fa-lg ml-2' />
+													<a href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}&t=${post.title}`} target="_blank" className="black-text">
+														<span className='fab fa-facebook text-primary fa-lg ' /></a>
+													<a href={`whatsapp://send?text=${window.location.href + " " + post.title}`} target="_blank" className="black-text">
+
+														<span className='fab fa-whatsapp text-success fa-lg ml-2' /></a>
 												</span>
+												<a href={`https://twiter.com/share?=${window.location.href}&via=Omoniyi56312253&text=${post.title}`} target="_blank" className="black-text">
+													<span className='fab fa-twitter twitw fa-lg ml-2' /></a>
+												<a href={`https://www.linkedin.com/shareArticle?url=${window.location.href}&title=${post.title}&summary=${post.description}&source=Beta_News`} className="black-text liker" target="_blank">
+													<span className='fab fa-linkedin text-primary liker fa-lg ml-2' /></a>
+
 											</div>
 										</div>
 										<div className='row about-betty border mt-4 py-0 mx-0 white'>
@@ -205,10 +232,10 @@ class Row2 extends React.Component {
 														<div className='fa fa-user fa-lg border-radius  blue-grey lighten-3 text-white px-1 pt-2' />
 													</div>
 													<div className='small col-md-10 col-sm-12 my-sm-3'>
-														<span className='font-weight-bold'>Beta</span> <br />
+														<span className='font-weight-bold ml-2'>Seun</span> <br />
 														<span className="small">
-															Beta is a columnist, astute marketer and customer relationship professional with over 2
-															decades of experience. Her blog aims to motivate women to aspire to greatness
+															Seun is a software developer, astute marketer and customer relationship professional with over 2
+															decades of experience. His blog aims to motivate people to aspire to greatness
 												</span>
 													</div>
 												</div>
@@ -325,10 +352,11 @@ class Row2 extends React.Component {
 
 
 		);
+
 	}
 }
 const mapStateToProps = state => ({
 	comment: state.posts.comment,
 	sp: state.posts.sp
 });
-export default connect(mapStateToProps, { Comment, singlePost })(Row2);
+export default connect(mapStateToProps, { Comment, singlePost })(withRouter(Row2));

@@ -13,7 +13,10 @@
 	margin-right: auto !important;
 	margin-left: auto !important;
 	height: 60vh;
-	width: 100vw !important;
+	width: 92vw !important;
+}
+.ssks{
+	font-size:13.5px ;
 }
 .smaller{
 	font-size: 0.87em;
@@ -21,10 +24,26 @@
 .loading{
 	background: white !important;
 	z-index: 1;
-	position: fixed;
 	margin-top: -90px;
-width: 100% !important;
+width: 100vw !important;
 height:  100% !important;
+}
+.twitw{
+	color: rgba(118, 118, 233, 0.999);
+}
+.tsm.text-danger.g{
+	color: rgb(233, 130, 130) !important;
+}
+.loooe{
+	color: rgb(168, 164, 164) !important;
+}
+.twitw+span, .liker{
+	color: rgb(27, 27, 177) !important;
+
+}
+.twitw+span+span{
+	color: rgba(105, 190, 43, 0.945) !important;
+
 }
 .loading div {
 	text-align: center;
@@ -35,7 +54,11 @@ height:  100% !important;
 	font-size: 30px;
 	font-weight: bold;
 	font-style: italic;
-	width: 100%;
+	left: 0 !important;
+	width: 100vw !important;
+	margin: 0 !important;
+	margin-left: 0 !important;
+	z-index: 3 !important;
 	position: fixed;
 
 }
@@ -57,9 +80,13 @@ height:  100% !important;
 	font-size: 14px;
 }
 @media screen and (max-width:600PX){
+	.rolle{
+		box-shadow: none !important;
+	}
 	.POST_IMG {
 		height: 48vw;
-		margin-bottom: 20px !important;
+		margin-bottom: 9px !important;
+		margin-top: -7px !important;
 	}
 		.ssk{
 			font-size: 13px !important;

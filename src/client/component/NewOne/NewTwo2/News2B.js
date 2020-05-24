@@ -47,8 +47,8 @@ class News2B extends Component {
 										<div
 											className='News2BTabPix mr-3 border rounded-lg'
 											style={{
-												backgroundImage: `url(${"http://localhost:3001/pot.jpg"})`,
-												backgroundSize: '100% 100%',
+												backgroundImage: `url(${post.picture})`,
+												backgroundSize: '100% 120%',
 											}}
 										/>
 										<Link to={`/post/${post.type + '+' + post._id}`}>
@@ -77,7 +77,7 @@ class News2B extends Component {
 											className='News2BTabPix border rounded-lg mr-3'
 											style={{
 												backgroundImage: `url(${post.picture})`,
-												backgroundSize: '100% 100%',
+												backgroundSize: '100% 120%',
 											}}
 										/>
 										<Link to={`/post/${post.type + '+' + post._id}`}>
@@ -108,7 +108,7 @@ class News2B extends Component {
 											y className='News2BTabPix mr-3 border rounded-lg'
 											style={{
 												backgroundImage: `url(${post.picture})`,
-												backgroundSize: '100% 100%',
+												backgroundSize: '100% 120%',
 											}}
 										/>
 										<Link to={`/post/${post.type + '+' + post._id}`}>

@@ -70,7 +70,7 @@ outline: 0 !important;
 .font-wei{
 	font-size: 14px;
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font-weight: 400 !important;
 	border: solid 1px;
 	letter-spacing: 2px;

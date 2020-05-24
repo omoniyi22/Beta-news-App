@@ -64,7 +64,7 @@ class SignIn extends Component {
 						</legend>
 						<div className='h6 font-weight-light w-100 text-primary'>
 							<div>Login</div>
-							<div className='fa fa-sign-in-alt mr-0 ml-3 ' />
+							<div className='fa fa-1a  fa-sign-in-alt mr-0 ml-3 ' />
 						</div>
 
 						{this.state.error && <div className="alert alert-danger alert-dismissable fade show" role='alert'>

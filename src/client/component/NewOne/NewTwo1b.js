@@ -55,7 +55,7 @@ class NewTwo1b extends Component {
 		return (
 			<div className='row  my-4 p-3 mt-5'>
 				<div className='col-12 pl-2  mb-4 mt-5'>
-					<span className='font-weight-bold fa fa-bookmark brubk fa-3x mr-2 ' />
+					<span className=' icofont-forest-fire text-danger brubk fa-5x mr-2 ' />
 					<span className='ml-2 gid'>Top Stories</span>
 				</div>
 
@@ -66,14 +66,14 @@ class NewTwo1b extends Component {
 
 							<Link to={`/post/${post.type + '+' + post._id}`} className="bv ">
 
-								<div className='row NewTwo1bag z-depth-1 rounded-well mb-sm-3 '>
+								<div className='row NewTwo1bag z-depth-1-half rounded-well mb-sm-3 '>
 									<div
-										className='col-md-6 mx-0   NewTwo1bpix'
+										className='col-md-6 mx-0   NewTwo1bpix rounded-well'
 										style={{
-											backgroundImage: `url(${post.picture})`,
+											backgroundImage: `url(${'http://localhost:3001/a.jpg'})`,
 											backgroundSize: 'cover',
 										}}>
-										<span class='border rounded-circle px-2 py-1 ml-0 mdb-color lighten-4 strike strike2 fa fa-bolt position-absolute' />
+										<span class='border rounded-circle px-1 py-1 ml-0  white strike mt-1 strike2 icofont-fire-burn font-weight-bold position-absolute' />
 
 									</div>
 									<div className='col-md-6 mx-0 '>
@@ -81,9 +81,7 @@ class NewTwo1b extends Component {
 											<Link to={`/post/${post.type + '+' + post._id}`} className="black-text">
 
 												{post.title}
-											</Link><span className=' float-right z-depth-0 mx-0 btn-sm px-2 py-1  font-weight-light badge z-depth-0 tsm text-uppercase white  rounded-pill'>
-												<span className="text-danger text-uppercase">  {post.type} </span>
-											</span>
+											</Link>
 										</div>
 										<div className='small'>
 											<Link to={`/post/${post.type + '+' + post._id}`} className="black-text" >
@@ -101,6 +99,9 @@ class NewTwo1b extends Component {
 											<div className="mt-2 mb-1 tsm">
 												<span className='fa fa-newspaper' /> Beta News<span className='fa fa-clock ml-2 mr-1 tsm' />
 												<Moment calendar>{post.date}</Moment>
+												<span className=' float-right z-depth-0 mx-0 btn-sm px-2 py-1  font-weight-light badge z-depth-0 tsm text-uppercase white  rounded-pill'>
+													<span className="text-danger text-uppercase tsm">  {post.type} </span>
+												</span>
 											</div>
 											<span className='float-right'>
 												{post.view && <><span className='fa fa-eye tsm' /> {post.views}</>}
@@ -120,7 +121,7 @@ class NewTwo1b extends Component {
 								backgroundImage: `url(${pix})`,
 								backgroundSize: '100% 100%',
 							}}>
-							<span class='border rounded-circle px-2 py-1 ml-0 mdb-color lighten-4 strike strike2 fa fa-bolt position-absolute' />
+							<span class='border rounded-circle px-2 py-1 ml-0 mdb-color lighten-4 strike strike2 fa fa-boookmark position-absolute' />
 
 						</div>
 						<div className='col-md-6 mx-0 '>

@@ -13,7 +13,7 @@ router.post('/contact', (req, res) => {
     const newUser = new Contact({
         first_name,
         last_name,
-        email,
+        email: req.body.email,
         subject,
         message,
         read: false,
@@ -23,7 +23,7 @@ router.post('/contact', (req, res) => {
 
     newUser.save().then((user) => {
         res.json({ mg: 'Message has been succesfully' })
-        console.log(user)
+        console.log({ mg: 'Message has been succesfully' })
     }).catch((err) => console.log(err));
 
 
@@ -39,39 +39,39 @@ router.post('/contact', (req, res) => {
 
     //Create reusable transporter object using the default SMTP transport
 
-    let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        port: 465,
-        secure: true, // true for 465, false for other ports
-        auth: {
-            user: 'omoniyioluwaseun22@gmail.com', // generated etheral user
-            pass: "seun2322" // generated ethereal password
-        },
-        tls: {
-            rejectUnauthorized: false
-        }
+    // let transporter = nodemailer.createTransport({
+    //     service: 'gmail',
+    //     port: 465,
+    //     secure: true, // true for 465, false for other ports
+    //     auth: {
+    //         user: 'omoniyioluwaseun22@gmail.com', // generated etheral user
+    //         pass: "seun2322" // generated ethereal password
+    //     },
+    //     tls: {
+    //         rejectUnauthorized: false
+    //     }
 
-    });
+    // });
 
-    //setup email data with unicode symbols
-    let mailOptions = {
-        from: "Beta News",
-        to: `omoniyioluwaseun22@gmail.com,${req.body.subject}, omoniyioluwaseun00@gmail.com, oyinadefunmilayo@gmail.com`,
-        subject: req.body.subject,
-        html: output
-    }
+    // //setup email data with unicode symbols
+    // let mailOptions = {
+    //     from: "Beta News",
+    //     to: `omoniyioluwaseun22@gmail.com,${req.body.subject}, omoniyioluwaseun00@gmail.com, oyinadefunmilayo@gmail.com`,
+    //     subject: req.body.subject,
+    //     html: output
+    // }
 
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            return console.log(error);
-        }
-        console.log('Message sent: %s', info.messageId);
-        console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-    })
+    // transporter.sendMail(mailOptions, (error, info) => {
+    //     if (error) {
+    //         return console.log(error);
+    //     }
+    //     console.log('Message sent: %s', info.messageId);
+    //     console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+    // })
 
 
-    res.json(req.body)
-    console.log(req.body)
+    // res.json(req.body)
+    // console.log(req.body)
 })
 
 

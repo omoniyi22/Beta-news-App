@@ -244,7 +244,6 @@ class Nav extends Component {
 										<Result fun={this.Togsearch.bind(this)} />
 									</ul>
 									<ul class="navbar-nav mr-auto px-2  text-center z-depth-0 border-bottom ">
-										klkflsfsl
 									</ul>
 								</div>
 							</nav>

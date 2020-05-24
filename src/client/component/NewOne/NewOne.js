@@ -100,8 +100,8 @@ function Adminx() {
 function Post() {
 	top();
 	return (
-		<div className='container-fliud'>
-			<div className='row '>
+		<div className='container-fliud my-0 white'>
+			<div className='row my-0'>
 				<Posts />
 			</div>
 		</div>

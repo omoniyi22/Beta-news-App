@@ -72,7 +72,7 @@ constructor(){
 							<div className='news-flex blue'>
 
 								<div className='newstwocontent'>
-									<span className=' px-2 py-1 mx-0 font-weight-light btn btn-sm z-depth-0 border white lighten-2'>
+									<span className=' px-2 py-1 mx-0 font-weight-light btn btn-sm z-depth-0 border white lighten-2 rounded-pill'>
 										<span className='text-danger small'>{post.type}</span>
 									</span>
 									<br />
@@ -107,7 +107,7 @@ constructor(){
 										<span className='small bv tsm'><Moment calendar>{post.date}</Moment></span>
 									</div>
 									<Link to={`/post/${post.type + '+' + post._id}`}>
-								<div className='small news2Text black-text'>{post.description}</div>
+								<div className='small news2Text black-text'>{post.description.slice(0,62)+" ..."}</div>
 								</Link>	
 								</div>
 								</div>
@@ -129,7 +129,7 @@ constructor(){
 							<div className='news-flex blue'>
 
 								<div className='newstwocontent'>
-									<span className=' px-2 py-1 mx-0 font-weight-light btn btn-sm z-depth-0 border white lighten-2'>
+									<span className=' px-2 py-1 mx-0 font-weight-light btn btn-sm z-depth-0 border white lighten-2 rounded-pill'>
 										<span className='text-danger small'>{post.type}</span>
 									</span>
 									<br />
@@ -164,7 +164,7 @@ constructor(){
 										<span className='small bv tsm'><Moment calendar>{post.date}</Moment></span>
 									</div>
 									<Link to={`/post/${post.type + '+' + post._id}`}>
-								<div className='small news2Text black-text'>{post.description}</div>
+								<div className='small news2Text black-text'>{post.description.slice(0,60)+" ..."}</div>
 								</Link>	
 								</div>
 								</div>
@@ -189,7 +189,7 @@ constructor(){
 								<div className='news-flex blue'>
 	
 									<div className='newstwocontent'>
-										<span className=' px-2 py-1 mx-0 font-weight-light btn btn-sm z-depth-0 border white lighten-2'>
+										<span className=' px-2 py-1 mx-0 font-weight-light btn btn-sm z-depth-0 border white lighten-2 rounded-pill'>
 											<span className='text-danger small'>{post.type}</span>
 										</span>
 										<br />
@@ -224,7 +224,7 @@ constructor(){
 										<span className='small bv tsm'><Moment calendar>{post.date}</Moment></span>
 									</div>
 									<Link to={`/post/${post.type + '+' + post._id}`}>
-								<div className='small news2Text black-text'>{post.description}</div>
+								<div className='small news2Text black-text'>{post.description.slice(0,60)+" ..."}</div>
 								</Link>	
 								</div>
 								</div>

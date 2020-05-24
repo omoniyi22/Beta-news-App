@@ -5,6 +5,8 @@ import Moment from 'react-moment'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 let count = 0
+let totalCount = undefined
+
 
 
 class Result extends Component {
@@ -73,38 +75,46 @@ class Result extends Component {
                     ))}
 
                 </div>
-                <span onClick={() => {
-                    let c = 1
-                    console.log("start")
-                    let totalCount = this.props.search[2]
-                    console.log(totalCount, "found")
+                {this.props.search[2] > 0 &&
+                    <div className="text-center w-100 border-top px-2">
 
-                    if (count < totalCount - 1) {
-                        count += 1
-                        console.log(count, "+n")
-                        this.props.controller(count)
-                    } else if (count == totalCount) {
-                        this.setState({
-                            disable: true
-                        })
-                    }
-                }}>next</span>
-                <span onClick={() => {
-                    console.log("start")
-                    let totalCount = this.props.search[2]
-                    console.log(totalCount, "found")
+                        <span className="btn btn-sm mr-2 " onClick={() => {
+                            console.log("start")
+                            totalCount = this.props.search[2]
+                            console.log(totalCount, "found")
 
-                    if (count > 0) {
-                        count -= 1
-                        this.props.controller(count)
-                        console.log(count, "-n")
+                            if (count > 0) {
+                                totalCount = this.props.search[2]
+                                count -= 1
+                                this.props.controller(count)
+                                console.log(count, "-n")
 
-                    } else if (count != 0 || count == totalCount) {
-                        this.setState({
-                            disable: true
-                        })
-                    }
-                }}>prev</span>
+                            } else if (count != 0 || count == totalCount) {
+                                this.setState({
+                                    disable: true
+                                })
+                            }
+                        }}>prev</span>
+                        <span className="small mr-1 px-1"> {count + 1} of {Number(this.props.search[2])}</span>
+                        <span className="btn btn-sm ml-2 " onClick={() => {
+                            let c = 1
+                            console.log("start")
+                            totalCount = this.props.search[2]
+                            console.log(totalCount, "found")
+
+                            if (count < totalCount - 1) {
+                                totalCount = this.props.search[2]
+
+                                count += 1
+                                console.log(count, "+n")
+                                this.props.controller(count)
+                            } else if (count == totalCount) {
+                                this.setState({
+                                    disable: true
+                                })
+                            }
+                        }}>next</span>
+                    </div >}
             </div >
         );
     }

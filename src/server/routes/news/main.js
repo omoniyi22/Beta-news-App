@@ -10,7 +10,7 @@ let q = []
 let m
 let items
 function fola(p) {
-    let content = 20
+    let content = 12
     items = Math.ceil(p.length / content)
     let i = 0
     let counts = 0

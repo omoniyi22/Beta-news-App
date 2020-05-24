@@ -51,6 +51,7 @@ padding-bottom: 0 !important; }
 @media screen and (max-width: 650px) {
 	.NewTwo1bpix {
 		max-height:44vw !important;
+		/* background-size: ; */
 	}
 
 	.ero {
@@ -115,7 +116,25 @@ padding-bottom: 0 !important; }
 		border:  solid 1px rgba(255, 255, 235, 0.857);
 	}
 }
+@media screen and (min-width: 767px ){
+	.NewTwo1bpix {
+		overflow: hidden;
+		background-size: 100% 160% !important;
+
+		border-bottom-right-radius: 0em  !important;
+		border-top-right-radius: 0em  !important;
+	}
+}
 @media screen and (max-width: 767px ){
+	.NewTwo1bpix{
+		overflow: hidden;
+		
+		background-size: 100% 160% !important;
+		border-bottom-left-radius: 0em !important;
+		border-bottom-right-radius: 0em !important;
+		border-top-right-radius: 9px  !important;
+
+	}
 	.NewTwo1bag {
 		padding-bottom: 10px;
 	}
@@ -129,6 +148,8 @@ padding-bottom: 0 !important; }
 }
 
 .NewTwo1bpix {
+	border-bottom-right-radius: 0em ;
+	border-top-right-radius: 0em ;
 	height: 210px;
 	display: flex;
 	flex-direction: row-reverse;

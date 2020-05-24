@@ -36,7 +36,7 @@ class Message extends Component {
     render() {
         return (
             <>
-                <section id="pricing" class="pricing section-bg " style={{ paddingRight: !this.state.showmodal && 0, paddingLeft: this.state.showmodal ? '0px' : '0', display: this.state.showmodal ? 'block' : 'block' }}>
+                <section id="pricing" class="container-fluid pricing section-bg " style={{ paddingRight: !this.state.showmodal && 0, paddingLeft: this.state.showmodal ? '0px' : '0', display: this.state.showmodal ? 'block' : 'block' }}>
                     <div class="" style={{ paddingRight: !this.state.showmodal && '0px' }}>
                         <button type='i' onClick={this.props.cancel} className=' mt-0 mb-4 btn-sm btn mr-0 ml-5  px-3 radius px-0 btn-white'>
                             <span className="fa fa-arrow-circle-left" /> Back
