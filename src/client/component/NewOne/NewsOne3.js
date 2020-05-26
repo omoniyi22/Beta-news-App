@@ -18,7 +18,7 @@ class NewsOne3 extends React.Component {
                     post !== undefined && (
                         <Link to={`/post/${post.type + '+' + post._id}`} >
 
-                            <div style={{ backgroundImage: `url(${post.picture})` }} className='newsIcon border-right pt-1'>
+                            <div style={{ backgroundImage: `url(${post.picture})`, backgroundPosition: "center", backgroundSize: 'cover' }} className='newsIcon border-right pt-1'>
                                 <div className='badge badge-inverse  pb-1 px-1 ml-2 white accent-1 text-capitalize  font-weight-light '><span className="text-danger tsm">News - {post.type}</span></div>
                                 <br />
                                 <div className='newsIconNews py-1 px-2 pb-2 '>
@@ -28,7 +28,7 @@ class NewsOne3 extends React.Component {
 
                                         </div>
                                         <div className='newsItems  p-0  mb-0 text-capitalize mt-0'>{post.title}</div>
-                                        <div className='newsItemsText p fa-xs'>
+                                        <div className='newsItemsText gaw p fa-xs'>
                                             {post.description}
                                         </div>
                                     </Link>
@@ -53,7 +53,7 @@ class NewsOne3 extends React.Component {
 
                                             </div>
                                             <div className='newsItems  p-0  mb-0 text-capitalize mt-0 font-weight-light'>{post.title}</div>
-                                            <div className='newsItemsText p fa-xs font-weight-light'>
+                                            <div className='newsItemsText gaw p fa-xs font-weight-light'>
                                                 {post.description}
                                             </div>
                                         </Link>

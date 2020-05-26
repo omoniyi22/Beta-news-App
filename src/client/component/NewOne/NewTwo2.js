@@ -13,8 +13,14 @@ function NewTwo2() {
 				<div className='lighten-1 col-md-12 px-0'>
 					<News2A />
 				</div>
+				<div className='grade lg-hidden z-depth-1 lighten-1 col-md-12 mt-4'>
+					<News2C />
+				</div>
 				<div className=' lighten-1 col-md-12 mt-4 bn-md'>
 					<News2B />
+				</div>
+				<div className='grade z-depth-1 lighten-1 col-md-12 mt-4'>
+					<News2C />
 				</div>
 				<div className='border-md lighten-1 col-md-12 mt-4  '>
 					<MostViewed />

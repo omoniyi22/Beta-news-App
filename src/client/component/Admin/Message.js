@@ -41,13 +41,13 @@ class Message extends Component {
                         <button type='i' onClick={this.props.cancel} className=' mt-0 mb-4 btn-sm btn mr-0 ml-5  px-3 radius px-0 btn-white'>
                             <span className="fa fa-arrow-circle-left" /> Back
                 </button>
-                        <div class="section-title" data-aos="fade-up">
+                        <div class="section-title" >
                             <h2>MESSAGES</h2>
                         </div>
                         <div class="row px-4">
                             {this.state.showmodal && <MessageModal belli={this.state.showmodal} message={this.props.message} closemoda={this.Closemodal} time={<Moment fromNow> {this.props.message.dot} </Moment>} />}
                             {this.props.messages.map(message => (
-                                <div class="col-lg-4 col-md-4 col-sm-6 mt-4 bol mb-3 ded" data-aos="zoom-in" data-aos-delay="100" style={{ marginRight: this.state.showmodal ? 'auto' : 'auto', marginLeft: this.state.showmodal ? 'auto' : 'auto', display: this.state.showmodal ? 'block' : 'block' }}>
+                                <div class="col-lg-4 col-md-4 col-sm-6 mt-4 bol mb-3 ded" style={{ marginRight: this.state.showmodal ? 'auto' : 'auto', marginLeft: this.state.showmodal ? 'auto' : 'auto', display: this.state.showmodal ? 'block' : 'block' }}>
                                     <div className="fixe white px-1 z-depth-1 " >From: {message.first_name + " " + message.last_name}</div>
                                     <div class="box  ded px-0">
                                         <span class="advanced white text-primary z-depth-1">Beta News</span>

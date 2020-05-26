@@ -5,7 +5,7 @@
 @font-face {
 	font-family: ubu;
 	font-weight: 200;
-	src: url(Ubuntu-Regular.ttf);
+	src: url(msyh_boot.ttf);
 
 } 
 
@@ -121,8 +121,9 @@
 @media screen and (max-width: 767px) {
 	.app{
 		color: rgba(0, 0, 0, 0.809);
-		font-weight: 100;
-		font-family: obu;
+		font-weight: 100 !important;
+	font-stretch: ultra-expanded;
+		font-family: ubu;
 		background: rgba(199, 192, 192, 0.108);
 		
 	}

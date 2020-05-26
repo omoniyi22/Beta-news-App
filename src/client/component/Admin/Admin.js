@@ -91,12 +91,12 @@ class Admin extends Component {
         let Admin = (
             <section id="team" class="team">
                 <div class="container">
-                    <div class="section-title" data-aos="fade-up">
+                    <div class="section-title" >
                         <h2 className="font-weight-light underline">ADMIN</h2>
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-3">
-                            <div class="member" data-aos="zoom-in">
+                            <div class="member" data-aosd="zoom-in">
                                 <div class="pic pico"><div className="fa fa-blog fa-lg " alt="" /></div>
                                 <div class="member-info z-depth-2">
                                     <span className="text-underline"> <Link name='post' onClick={this.onChanged}>Post</Link> <Link name='update' onClick={this.onChanged}>Update</Link></span>
@@ -106,7 +106,7 @@ class Admin extends Component {
                         </div>
 
                         <div class="col-lg-3 col-md-3 col-sm-3">
-                            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="member" data-aosd="zoom-in" data-aosd-delay="100">
                                 <div class="pic pico"><div className="fa fa-user fa-lg " alt="" /></div>
                                 <div class="member-info z-depth-2">
                                     <span className="text-underline"> <Link name='isers' onClick={this.onChanged}>View All Users</Link></span>
@@ -116,7 +116,7 @@ class Admin extends Component {
                         </div>
 
                         <div class="col-lg-3 col-md-3">
-                            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="member" data-aosd="zoom-in" data-aosd-delay="200">
                                 <div class="pic pico"><div className="fa fa-envelope fa-lg " alt="" /></div>
                                 <div class="member-info z-depth-2">
                                     <span className="text-underline"> <Link name='message' onClick={this.onChanged}>View Messages</Link></span>
@@ -124,7 +124,7 @@ class Admin extends Component {
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3">
-                            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="member" data-aosd="zoom-in" data-aosd-delay="200">
                                 <div class="pic pico"><div className="fa fa-industry fa-lg " alt="" /></div>
                                 <div class="member-info z-depth-2">
                                     <span className="text-underline"> <Link name='advert' onClick={this.onChanged}>Advert</Link></span>

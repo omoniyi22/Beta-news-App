@@ -28,7 +28,7 @@ class NewsOne1 extends React.Component {
 
 										</div>
 										<div className='newsItems  p-0  text-capitalize mb-0 mt-0'>{post.title}</div>
-										<div className='newsItemsText p fa-xs'>
+										<div className='newsItemsText gaw p fa-xs'>
 											{post.description}
 										</div>
 									</Link>
@@ -51,7 +51,7 @@ class NewsOne1 extends React.Component {
 											<span className='fa fa-clock' /> <Moment calendar>{post.date}</Moment>
 										</div>
 										<div className='newsItems  p-0 text-capitalize mb-0 mt-0'>{post.title}</div>
-										<div className='newsItemsText p fa-xs'>
+										<div className='newsItemsText gaw p fa-xs'>
 											{post.description}
 										</div>
 									</Link>

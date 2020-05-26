@@ -43,17 +43,18 @@ class News2B extends Component {
 							post !== undefined && (
 								<Link to={`/post/${post.type + '+' + post._id}`}  >
 
-									<div className='News2BTabRecent mt-0  py-2   border-bottom w-100'>
+									<div className='News2BTabRecent border-bottom  mt-0  py-2   w-100'>
 										<div
 											className='News2BTabPix mr-3 border rounded-lg'
 											style={{
 												backgroundImage: `url(${post.picture})`,
 												backgroundSize: '100% 120%',
+												backgroundPosition: 'center'
 											}}
 										/>
 										<Link to={`/post/${post.type + '+' + post._id}`}>
 											<div className='News2BTabTitle text-left pt-1 '>
-												<div className='News2BTabTopic  news2Text black-text'>{post.title}</div>
+												<div className='News2BTabTopic  news2Text gaw black-text'>{post.title}</div>
 												<div className='News2BTabDate small mt-1 font-weight-light'>
 													<span className='fa fa-calendar-day mr-1 tsm' />
 													<span className="tsm">
@@ -72,17 +73,19 @@ class News2B extends Component {
 							post !== undefined && (
 								<Link to={`/post/${post.type + '+' + post._id}`} >
 
-									<div className='News2BTabRecent mt-0 py-2'>
+									<div className='News2BTabRecent border-bottom  mt-0 py-2'>
 										<div
 											className='News2BTabPix border rounded-lg mr-3'
 											style={{
 												backgroundImage: `url(${post.picture})`,
 												backgroundSize: '100% 120%',
+												backgroundPosition: 'center'
+
 											}}
 										/>
 										<Link to={`/post/${post.type + '+' + post._id}`}>
 											<div className='News2BTabTitle text-left pt-1 '>
-												<div className='News2BTabTopic  news2Text black-text'>{post.title}</div>
+												<div className='News2BTabTopic  news2Text gaw black-text'>{post.title}</div>
 												<div className='News2BTabDate small mt-1 font-weight-light'>
 													<span className='fa fa-calendar-day mr-1 tsm' />
 													<span className="tsm">
@@ -103,17 +106,19 @@ class News2B extends Component {
 							post !== undefined && (
 								<Link to={`/post/${post.type + '+' + post._id}`} >
 
-									<div className='News2BTabRecent mt-0 py-2'>
+									<div className='News2BTabRecent border-bottom  mt-0 py-2'>
 										<div
 											y className='News2BTabPix mr-3 border rounded-lg'
 											style={{
 												backgroundImage: `url(${post.picture})`,
 												backgroundSize: '100% 120%',
+												backgroundPosition: 'center'
+
 											}}
 										/>
 										<Link to={`/post/${post.type + '+' + post._id}`}>
 											<div className='News2BTabTitle text-left pt-1 '>
-												<div className='News2BTabTopic  news2Text black-text'>{post.title}</div>
+												<div className='News2BTabTopic  news2Text gaw black-text'>{post.title}</div>
 												<div className='News2BTabDate small mt-1 font-weight-light'>
 													<span className='fa fa-calendar-day mr-1 tsm' />
 													<span className='tsm'>

@@ -53,7 +53,7 @@ class NewTwo1b extends Component {
 	}
 	render() {
 		return (
-			<div className='row  my-4 p-3 mt-5'>
+			<div className='row rowa  my-4 p-3 mt-5'>
 				<div className='col-12 pl-2  mb-4 mt-5'>
 					<span className=' icofont-forest-fire text-danger brubk fa-5x mr-2 ' />
 					<span className='ml-2 gid'>Top Stories</span>
@@ -66,25 +66,26 @@ class NewTwo1b extends Component {
 
 							<Link to={`/post/${post.type + '+' + post._id}`} className="bv ">
 
-								<div className='row NewTwo1bag z-depth-1-half rounded-well mb-sm-3 '>
+								<div className='row NewTwo1bag z-de rounded-well mb-sm-3 '>
 									<div
 										className='col-md-6 mx-0   NewTwo1bpix rounded-well'
 										style={{
 											backgroundImage: `url(${post.picture})`,
 											backgroundSize: 'cover',
+											backgroundPosition: 'center'
 										}}>
-										<span class='border rounded-circle px-1 py-1 ml-0  white strike mt-1 strike2 icofont-fire-burn font-weight-bold position-absolute' />
+										<span class='border rounded-circle px-1 py-1 ml-0 f white strike mt-1 strike2 icofont-fire-burn font-weight-bold position-absolute' />
 
 									</div>
 									<div className='col-md-6 mx-0 '>
-										<div className='font-weight-bold mt-2 mb-2'>
-											<Link to={`/post/${post.type + '+' + post._id}`} className="black-text">
+										<div className='font-weight-bold mt-2 mb-1'>
+											<Link to={`/post/${post.type + '+' + post._id}`} className="black-text font-weight-bold">
 
 												{post.title}
 											</Link>
 										</div>
-										<div className='small'>
-											<Link to={`/post/${post.type + '+' + post._id}`} className="black-text" >
+										<div className='small '>
+											<Link to={`/post/${post.type + '+' + post._id}`} className="black-text font-weight-light  nikke gaw" >
 
 												{post.description}
 											</Link>

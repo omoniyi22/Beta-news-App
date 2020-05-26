@@ -55,8 +55,8 @@ constructor(){
 							</div>
 						</div>
 					</div>
-					<div className='ero'>
-						<span class='border rounded-circle px-2 py-1 ml-0 mdb-color lighten-4 strike fa fa-bolt' />
+					<div className='ero sm-hidden'>
+						<span class='border rounded-circle px-1 py-1 ml-0 mt-1 mdb-color lighten-4 strike fa fa-bolt' />
 					</div>
 					<div id='myTabContent' className='tab-content row Second1 mt-3'>
 
@@ -78,7 +78,7 @@ constructor(){
 									<br />
 									<div className='mt-2 h4 font-weight-light small capitalize'>{post.title}</div>
 									<div className='small font-weight-light tsm '>
-										Betty New bvs <Moment calendar>{post.date}</Moment>
+										Betty New <Moment calendar>{post.date}</Moment>
 									</div>
 								</div>
 							</div>
@@ -87,17 +87,18 @@ constructor(){
 						)
 						))}
 						
-						<div className='col-lg-6 newsTwoIcon ml-0 '>
+						<div className='col-lg-6 newsTwoIcon ml-0 border-top'>
 						{this.props.sport.map(post => (
 							post !== undefined && (
 						<Link to={`/post/${post.type + '+' + post._id}`} >
 								
-								<div className=' news2 border my-1 p-2 rounded'>
+								<div className=' news2 border-bottom my-0 pt-2 pb-2 pl-1 pr-1'>
 								<div
 									className='newsTwoIconPix'
 									style={{
 										backgroundImage: `url(${post.picture})`,
-										backgroundSize: '100% 100%',
+										backgroundSize: 'cover',
+										backgroundPosition:'center'
 									}}>
 									
 								</div>
@@ -107,7 +108,7 @@ constructor(){
 										<span className='small bv tsm'><Moment calendar>{post.date}</Moment></span>
 									</div>
 									<Link to={`/post/${post.type + '+' + post._id}`}>
-								<div className='small news2Text black-text'>{post.description.slice(0,62)+" ..."}</div>
+								<div className=' small news2Text gaw black-text'>{post.description}</div>
 								</Link>	
 								</div>
 								</div>
@@ -149,7 +150,7 @@ constructor(){
 							post !== undefined && (
 								<Link to={`/post/${post.type + '+' + post._id}`} >
 								
-								<div className=' news2 border my-1 p-2 rounded'>
+								<div className=' news2 border-bottom my-0 pt-2 pb-2 pl-1 pr-1'>
 								<div
 									className='newsTwoIconPix'
 									style={{
@@ -164,7 +165,7 @@ constructor(){
 										<span className='small bv tsm'><Moment calendar>{post.date}</Moment></span>
 									</div>
 									<Link to={`/post/${post.type + '+' + post._id}`}>
-								<div className='small news2Text black-text'>{post.description.slice(0,60)+" ..."}</div>
+								<div className='gaw small news2Text gaw black-text'>{post.description.slice(0,60)+" ..."}</div>
 								</Link>	
 								</div>
 								</div>
@@ -195,7 +196,7 @@ constructor(){
 										<br />
 										<div className='mt-2 h4 font-weight-light small capitalize'>{post.title}</div>
 										<div className='small font-weight-light tsm '>
-											Betty New bvs <Moment calendar>{post.date}</Moment>
+											Betty New <Moment calendar>{post.date}</Moment>
 										</div>
 									</div>
 								</div>
@@ -209,7 +210,7 @@ constructor(){
 							post !== undefined && (
 								<Link to={`/post/${post.type + '+' + post._id}`} >
 								
-								<div className=' news2 border my-1 p-2 rounded'>
+								<div className=' news2 border-bottom my-0 pt-2 pb-2 pl-1 pr-1'>
 								<div
 									className='newsTwoIconPix'
 									style={{
@@ -224,7 +225,7 @@ constructor(){
 										<span className='small bv tsm'><Moment calendar>{post.date}</Moment></span>
 									</div>
 									<Link to={`/post/${post.type + '+' + post._id}`}>
-								<div className='small news2Text black-text'>{post.description.slice(0,60)+" ..."}</div>
+								<div className='gaw small news2Text gaw black-text'>{post.description.slice(0,60)+" ..."}</div>
 								</Link>	
 								</div>
 								</div>
@@ -253,11 +254,11 @@ constructor(){
 
 const mapStateToProps = (state)=>({
 	po : [state.posts.items[1]],
-	politics: state.posts.items.slice(1,5),
+	politics: state.posts.items.slice(1,6),
 	sp: [state.posts.sport[1]],
-	sport:    [state.posts.sport[2], state.posts.sport[3], state.posts.sport[5], state.posts.sport[5]],
+	sport:    [state.posts.sport[2], state.posts.sport[3], state.posts.sport[5], state.posts.sport[5],  state.posts.sport[6]],
 	fo: [state.posts.foreign[1]],
-	foreign: [state.posts.foreign[2], state.posts.foreign[3], state.posts.foreign[4], state.posts.foreign[5]]
+	foreign: [state.posts.foreign[2], state.posts.foreign[3], state.posts.foreign[4], state.posts.foreign[5], state.posts.foreign[6]]
 
 })
 export default connect(mapStateToProps, { foreignPosts, sportPosts, fetchPosts })(NewTwo1)

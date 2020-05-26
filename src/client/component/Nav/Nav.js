@@ -13,6 +13,20 @@ import { stat } from 'fs';
 const icon = require('./icon.png');
 
 // let count
+
+/* Set the width of the side navigation to 250px */
+const sty = {
+	width: "210px",
+	transition: "width 0.5s"
+}
+
+/* Set the width of the side navigation to 0 */
+const styl = {
+	width: "0px",
+	transition: "width 0.5s"
+
+}
+
 class Nav extends Component {
 	constructor() {
 		super()
@@ -60,6 +74,7 @@ class Nav extends Component {
 		});
 	}
 
+
 	logOut(e) {
 		this.setState({
 			first_name: "login"
@@ -93,11 +108,11 @@ class Nav extends Component {
 		)
 		return (
 			<div className='border-bottom pb-0 peach z-depth-1'>
-				<div className='navbar navbar py-1  border-bottom mt-0 z-depth-0'>
+				<div className='navbar navbar py-0  border-bottom mt-0 z-depth-0'>
 					<div className='navbar-header pull-right h4-responsive mx-0'>
 						<div className='navbar-brand sm-hidden mt-1 pl-0 mr-2 ml-md-4 font-wei border border-white  px-2 mr-2 rounded-lg'>
 							<Link to='/' className=' font-wei px-1 sm-hidden   text-danger'>
-								Bετα Νεws
+								Bεᴛα Νεws
 							</Link>
 
 						</div>
@@ -105,7 +120,7 @@ class Nav extends Component {
 
 							<div className='navbar-brand mt-1 pl-0 mr-2 lg-hidden ml-md-4 font-wei border border-white  px-2 mr-2 rounded-lg'>
 								<Link to='/' className=' font-wei px-1  text-danger'>
-									Bετα Νεws
+									Bεᴛα Νεws
 							</Link>
 
 							</div>
@@ -124,7 +139,37 @@ class Nav extends Component {
 								<input placeholder="..search" type="text" class=" my-0" id="recipient-name" name="l_input" value={this.state.l_input}
 									onChange={this.onChange.bind(this)} />
 								<span class="input-group-addon    black-text   pt-1 " >
-									<span className="fa icofont-search gh  px-1 text-danger" />
+									{this.state.togsearch ? <span className="fa icofont-search gh  px-1 text-danger" onClick={
+										() => {
+											if (this.state.l_input != '') {
+												this.setState(prevState => {
+													return {
+														togsearch: !prevState.togsearch
+													};
+												});
+												this.props.searched(this.state.l_input)
+												this.setState({
+													l_input: ""
+												})
+											}
+										}
+									} />
+										: <span>
+											{`${this.state.l_input}`.length > 0 ? <span className="fa icofont-search gh  px-1 text-danger " onClick={() => {
+												if (this.state.l_input != '') {
+													this.props.searched(this.state.l_input)
+													this.setState({
+														l_input: ""
+													})
+												}
+											}} />
+												:
+												<li onClick={this.Togsearch.bind(this)}
+													className='sm-hidden   py-2 rounded-lg  mr-0 ml-3 gh v font-weight-light  mt-2 text-danger collaspsed '>
+													x
+												</li>
+											}
+										</span>}
 								</span>
 							</div>
 						</div>
@@ -220,7 +265,7 @@ class Nav extends Component {
 						<span className='rounded-pill ml-2 '>
 
 							{this.state.togsearch ? <li onClick={this.Collapsed.bind(this)}
-								className='lg-hidden  ml-2 py-2 rounded-lg icofont-navigation-menu font-weight-light   gh collaspsed '
+								className='lg-hidden  ml-2 py-2 rounded-lg fa fa-bars    gh collaspsed '
 							>
 							</li>
 								: <li onClick={this.Togsearch.bind(this)}
@@ -231,9 +276,11 @@ class Nav extends Component {
 					</ul>
 				</div>
 
-				{!this.state.collapse &&
+				{/* {!this.state.collapse && */}
+				<div id="mySidenav" style={this.state.collapse ? styl : sty} className=" mobile-naav animated  position-fixed  mr-2 mt-0" >
 					<SmallNav fun={this.Collapsed.bind(this)} />
-				}
+				</div>
+				{/* } */}
 
 				{!this.state.togsearch &&
 					<div className="mobile-naav z-depth-0  position-fixed  mr-2 mt-0" >

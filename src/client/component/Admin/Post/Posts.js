@@ -84,7 +84,7 @@ class Posts extends Component {
                                             }}
                                         />
                                         <div className='News2BTabTitle text-left pt-1 float-left'>
-                                            <div className='News2BTabTopic small news2Text'>{post.title}</div>
+                                            <div className='News2BTabTopic small news2Text gaq'>{post.title}</div>
                                             <div className='News2BTabDate small mt-1 font-weight-light'>
                                                 <span className='fa fa-clock    mr-1' /><Moment fromNow>{post.date}</Moment>
                                             </div>
@@ -113,7 +113,7 @@ class Posts extends Component {
                                             }}
                                         />
                                         <div className='News2BTabTitle text-left pt-1 float-left'>
-                                            <div className='News2BTabTopic small news2Text'>{post.title}</div>
+                                            <div className='News2BTabTopic small news2Text gaq'>{post.title}</div>
                                             <div className='News2BTabDate small mt-1 font-weight-light'>
                                                 <span className='fa fa-clock    mr-1' /><Moment fromNow>{post.date}</Moment>
                                             </div>
@@ -141,7 +141,7 @@ class Posts extends Component {
                                             }}
                                         />
                                         <div className='News2BTabTitle text-left pt-1 float-left'>
-                                            <div className='News2BTabTopic small news2Text'>{post.title}</div>
+                                            <div className='News2BTabTopic small news2Text gaq'>{post.title}</div>
                                             <div className='News2BTabDate small mt-1 font-weight-light'>
                                                 <span className='fa fa-clock    mr-1' /><Moment fromNow>{post.date}</Moment>
                                             </div>
@@ -169,7 +169,7 @@ class Posts extends Component {
                                             }}
                                         />
                                         <div className='News2BTabTitle text-left pt-1 float-left'>
-                                            <div className='News2BTabTopic small news2Text'>{post.title}</div>
+                                            <div className='News2BTabTopic small news2Text gaq'>{post.title}</div>
                                             <div className='News2BTabDate small mt-1 font-weight-light'>
                                                 <span className='fa fa-clock    mr-1' /><Moment fromNow>{post.date}</Moment>
                                             </div>
@@ -197,7 +197,7 @@ class Posts extends Component {
                                             }}
                                         />
                                         <div className='News2BTabTitle text-left pt-1 float-left'>
-                                            <div className='News2BTabTopic small news2Text'>{post.title}</div>
+                                            <div className='News2BTabTopic small news2Text gaq'>{post.title}</div>
                                             <div className='News2BTabDate small mt-1 font-weight-light'>
                                                 <span className='fa fa-clock    mr-1' /><Moment fromNow>{post.date}</Moment>
                                             </div>
@@ -225,7 +225,7 @@ class Posts extends Component {
                                             }}
                                         />
                                         <div className='News2BTabTitle text-left pt-1 float-left'>
-                                            <div className='News2BTabTopic small news2Text'>{post.title}</div>
+                                            <div className='News2BTabTopic small news2Text gaq'>{post.title}</div>
                                             <div className='News2BTabDate small mt-1 font-weight-light'>
                                                 <span className='fa fa-clock    mr-1' /><Moment fromNow>{post.date}</Moment>
                                             </div>

@@ -137,6 +137,6 @@ export const deleted = newUser => {
 
 
 export const deleteMessage = data => {
-    fetch(`/users/message/delete/${data}`)
+    fetch(`/message/delete/${data}`)
         .then(res => res.json().msg)
 }

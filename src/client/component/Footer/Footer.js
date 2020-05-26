@@ -13,7 +13,7 @@ class Footer extends Component {
 				<div className='row'
 				>
 					<div className='col-md-6 text-uppercase  my-2'>
-						<Link className="text-white" to={"/"}>Bετα Νεws</Link>
+						<Link className="text-white font-weight-bold" to={"/"}>Bετα Νεws</Link>
 					</div>
 					<div className='col-md-6 my-2 sm-hidden'>
 						Beta News is your everyday Nigeria Events, News and happenings, Fashion and Beauty,

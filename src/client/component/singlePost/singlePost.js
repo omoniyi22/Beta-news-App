@@ -134,11 +134,12 @@ class Row2 extends React.Component {
 														<span className='fa fa-clock tsm text-danger g' />
 														<span className="ml-1 small mb-1 "><Moment calendar>{post.date}</Moment></span>
 													</span>
-													<div className='title gia font-weight-light text-uppercase my-1 '>{post.title}</div>
-													<div className='text-capitalize ssk  small  mb-2 mt-md-2 mt-sm-1'>{post.description}</div>
-													<div className='float-right mt-2 text-danger'>
+													<div className='title gia font-weight-light gaw text-uppercase my-1 mb-3 '>{post.title}</div>
+													<div className='text-capitalize ssk gaw  sm-hidden small  mb-2 mt-md-2 mt-sm-1'>{post.description}</div>
+
+													{/* <div className='float-right mt-2 text-danger'>
 														{post.views >= 50 && <> <span className='fa fa-eye' />post.views</>}
-													</div>
+													</div> */}
 												</div>
 											</div>
 											<div className='col-12 share-link text-center my-0 sm-hidden'>
@@ -155,8 +156,12 @@ class Row2 extends React.Component {
 											</div>
 											<div style={{
 												backgroundImage: `url(${post.picture})`,
-												backgroundSize: '100% 117%',
-											}} className=' border text-center mx-auto POST_IMG w-100 mb-sm-3 mb-md-4 ' alt='POST_IMG' />									<div className='content ssks small col-12 px-sm-2 px-md-3 mt-sm-3 mt-md-3 py-md-1 '>
+												backgroundSize: '104% 127%',
+												backgroundPosition: 'center'
+											}} className=' border text-center mx-auto POST_IMG w-100 mb-sm-3 mb-md-4 ' alt='POST_IMG' />
+											<div className='content ssks  col-12 px-sm-2 px-md-3 mt-sm-3 mt-md-3 py-md-1 '>
+												<div className='text-capitalize ssk gaw  lg-hiddem small  mb-2 mt-md-2 mt-sm-1'>{post.description}</div>
+
 												{renderHTML(post.content)}
 											</div>
 											<div className=' col-12  mt-4 mb-0 pb-0'>
@@ -165,7 +170,7 @@ class Row2 extends React.Component {
 												</span>
 												<div className='social-medias mt-0 border-top border-bottom'>
 													<button className='btn btn-md z-depth-0 m-0 blue-grey py-0 px-1 px-md-2 lighten-5 border-default border small'>
-														<span className=' fab fa-md fa-twitter small pr-1' />
+														<span className=' fab fa-md fa-twitter small pr-1 tttt' />
 														<span className="small">
 															<a href={`https://twiter.com/share?=${window.location.href}&via=Omoniyi56312253&text=${post.title}`} target="_blank" className="black-text">
 																Twitter
@@ -173,7 +178,7 @@ class Row2 extends React.Component {
 														</span>
 													</button>
 													<button className='btn btn-md z-depth-0 mr-0 ml-1 blue-grey py-0 px-1 px-md-2 lighten-5 border-default border small'>
-														<span className=' fab fa-md fa-facebook pr-1 ' />
+														<span className=' fab fa-md fa-facebook pr-1 text-primary' />
 														<span className="small">
 															<a href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}&t=${post.title}`} target="_blank" className="black-text">
 																Facebook
@@ -187,7 +192,7 @@ class Row2 extends React.Component {
 												 </span>
 													</button> */}
 													<button className='btn btn-md z-depth-0 mr-0 ml-1 blue-grey py-0 px-1 px-md-2 lighten-5 border-default border small'>
-														<span className=' fab fa-md fa-whatsapp pr-1' />
+														<span className=' fab fa-md fa-whatsapp pr-1 what' />
 														<span className="black-text small">
 															<a href={`whatsapp://send?text=${window.location.href + " " + post.title}`} target="_blank" className="black-text">
 																Whatsapp
@@ -196,7 +201,7 @@ class Row2 extends React.Component {
 
 													</button>
 													<button className='btn btn-md z-depth-0 mr-0 ml-1 blue-grey py-0 px-1 px-md-2 lighten-5 border-default border small'>
-														<span className=' fab fa-md fa-telegram pr-1' />
+														<span className=' fab fa-md fa-telegram pr-1 tttt' />
 														<span className="small">
 															<a href={`https://telegram.me/share/url?url=${window.location.href}&text=${post.title}`} target="_blank" className="black-text">
 																Telegram
@@ -213,13 +218,13 @@ class Row2 extends React.Component {
 													<div className=" fa fa-share-alt "></div><div className="ml-1 float-right"> share</div></div>
 												<span className='text-center'>
 													<a href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}&t=${post.title}`} target="_blank" className="black-text">
-														<span className='fab fa-facebook text-primary fa-lg ' /></a>
+														<span className='fab fa-facebook-square text-primary fa-lg ' /></a>
 													<a href={`whatsapp://send?text=${window.location.href + " " + post.title}`} target="_blank" className="black-text">
 
-														<span className='fab fa-whatsapp text-success fa-lg ml-2' /></a>
+														<span className='fab fa-whatsapp-square text-success fa-lg ml-2' /></a>
 												</span>
 												<a href={`https://twiter.com/share?=${window.location.href}&via=Omoniyi56312253&text=${post.title}`} target="_blank" className="black-text">
-													<span className='fab fa-twitter twitw fa-lg ml-2' /></a>
+													<span className='fab fa-twitter-square twitw fa-lg ml-2' /></a>
 												<a href={`https://www.linkedin.com/shareArticle?url=${window.location.href}&title=${post.title}&summary=${post.description}&source=Beta_News`} className="black-text liker" target="_blank">
 													<span className='fab fa-linkedin text-primary liker fa-lg ml-2' /></a>
 

@@ -16,7 +16,7 @@
 	width: 92vw !important;
 }
 .ssks{
-	font-size:13.5px ;
+	font-size:14.9px ;
 }
 .smaller{
 	font-size: 0.87em;
@@ -28,8 +28,8 @@
 width: 100vw !important;
 height:  100% !important;
 }
-.twitw{
-	color: rgba(118, 118, 233, 0.999);
+.twitw, .tttt{
+	color: rgb(130, 181, 240);
 }
 .tsm.text-danger.g{
 	color: rgb(233, 130, 130) !important;
@@ -41,7 +41,7 @@ height:  100% !important;
 	color: rgb(27, 27, 177) !important;
 
 }
-.twitw+span+span{
+.twitw+span+span, .what{
 	color: rgba(105, 190, 43, 0.945) !important;
 
 }
@@ -84,7 +84,7 @@ height:  100% !important;
 		box-shadow: none !important;
 	}
 	.POST_IMG {
-		height: 48vw;
+		height: 50vw;
 		margin-bottom: 9px !important;
 		margin-top: -7px !important;
 	}

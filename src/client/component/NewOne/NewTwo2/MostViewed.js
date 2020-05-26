@@ -65,7 +65,7 @@ class MostViewed extends Component {
 
                 <div className="MV1 pt-2  pb-3 my-0   px-md-2 px-sm-3 border-bottom ">
                   <div className="mvlink ml-2 ml-md-1 font-weight-light   mt-2  ">
-                    <div className="mvtitle">{post.title}</div>
+                    <div className="mvtitle gaw">{post.title}</div>
                     <div className="mvdate mt-2">
                       <span className="fa fa-clock fa-md mr-2 tsm" />
                       <span className="tsm ">
@@ -79,6 +79,7 @@ class MostViewed extends Component {
                       style={{
                         backgroundImage: `url(${post.picture})`,
                         backgroundSize: '100% 130%',
+                        backgroundPosition: 'center'
                       }}
                     />
                   </div>

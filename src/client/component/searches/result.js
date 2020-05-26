@@ -34,10 +34,10 @@ class Result extends Component {
             <div className='row  px-1 pt-2 '>
                 <div className='col-12 pl-2  mb-4 '>
                     <span className='font-weight-bold icofont-bookmark  fa-3x mr-2 ' />
-                    <span className='ml-2 gid'>Results</span>
-                    <span className='ml-2 gid'>{
-                        this.props.search.length > 0 ? this.props.search[1]
-                            : "..."}</span>
+                    <span className='ml-2 gid'>  </span>
+                    <span className='ml-3 gid'>{
+                        this.props.search.length > 0 ? this.props.search[1] + " " + "results" + " " + "found"
+                            : "Results..."}</span>
                 </div>
 
 
@@ -52,11 +52,11 @@ class Result extends Component {
                                     () => this.props.fun()
                                 }>
                                     <div className="mvlink ml-2 ml-md-1 font-weight-light   mt-2  ">
-                                        <div className="mvtitle">{post.title}</div>
+                                        <div className="mvtitle gaw">{post.title}</div>
                                         <div className="mvdate mt-2">
                                             <span className="fa fa-clock fa-md mr-2 tsm" />
                                             <span className="tsm ">
-                                                <Moment calendar>{post.date}</Moment>{post._id}
+                                                <Moment calendar>{post.date}</Moment>
                                             </span>
                                         </div>
                                     </div>
