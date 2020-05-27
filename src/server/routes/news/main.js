@@ -71,7 +71,7 @@ router.get('/main/:search', (req, res) => {
                                                             if (q.length > 0) {
                                                                 res.json([q, m, items])
                                                             } else {
-                                                                res.json([[[]], "No result found", []])
+                                                                res.json([[[]], "No", []])
                                                             }
                                                         })
                                                 })

@@ -28,8 +28,8 @@ class Row extends Component {
 	}
 	render() {
 		return (
-			<div className='container-fliud'>
-				<div className='row mb-4'>
+			<div className='container-fliud boroww'>
+				<div className='row mb-4 '>
 					<NewsOne2 />
 					<NewsOne1 />
 					<NewsOne3 />
@@ -47,7 +47,7 @@ function ContactRow() {
 	top();
 
 	return (
-		<div className='container-fliud'>
+		<div className='container-fliud boroww'>
 			<div className='row'>
 				<Contact />
 			</div>
@@ -57,7 +57,7 @@ function ContactRow() {
 function AdvertRow() {
 	top();
 	return (
-		<div className='container-fliud'>
+		<div className='container-fliud boroww'>
 			<div className='row'>
 				<Advert />
 			</div>
@@ -70,7 +70,7 @@ function AdvertRow() {
 function SignUp() {
 	top();
 	return (
-		<div className='container-fliud'>
+		<div className='container-fliud boroww'>
 			<div className='row'>
 				<Sign />
 			</div>
@@ -90,7 +90,7 @@ function SignInRow() {
 function Adminx() {
 	top();
 	return (
-		<div className='container-fliud'>
+		<div className='container-fliud boroww'>
 			<div className='row'>
 				<Admin />
 			</div>
@@ -100,7 +100,7 @@ function Adminx() {
 function Post() {
 	top();
 	return (
-		<div className='container-fliud my-0 white'>
+		<div className='container-fliud my-0 white boroww'>
 			<div className='row my-0'>
 				<Posts />
 			</div>

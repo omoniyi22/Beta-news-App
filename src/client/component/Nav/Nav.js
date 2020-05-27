@@ -16,14 +16,16 @@ const icon = require('./icon.png');
 
 /* Set the width of the side navigation to 250px */
 const sty = {
-	width: "210px",
-	transition: "width 0.5s"
+	transitionDuratin: "0.5s",
+	transitionProperty: "min-width",
+	minWidth: "500px"
 }
 
 /* Set the width of the side navigation to 0 */
 const styl = {
-	width: "0px",
-	transition: "width 0.5s"
+	transitionDuratin: "0.5s",
+	transitionProperty: "min-width",
+	minWidth: "0"
 
 }
 
@@ -277,7 +279,15 @@ class Nav extends Component {
 				</div>
 
 				{/* {!this.state.collapse && */}
-				<div id="mySidenav" style={this.state.collapse ? styl : sty} className=" mobile-naav animated  position-fixed  mr-2 mt-0" >
+				<div id="mySidenav" style={!this.state.collapse ? {
+					width: "210px",
+					transition: "width 0.5s"
+
+				} : {
+						width: "0px",
+						transition: "width 0.5s"
+
+					}} className=" mobile-naav border-right  position-fixed  mr-2 mt-0" >
 					<SmallNav fun={this.Collapsed.bind(this)} />
 				</div>
 				{/* } */}

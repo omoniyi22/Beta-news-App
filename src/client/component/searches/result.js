@@ -52,10 +52,10 @@ class Result extends Component {
                                     () => this.props.fun()
                                 }>
                                     <div className="mvlink ml-2 ml-md-1 font-weight-light   mt-2  ">
-                                        <div className="mvtitle gaw">{post.title}</div>
+                                        <div className="mvtitle text-white gaw">{post.title}</div>
                                         <div className="mvdate mt-2">
                                             <span className="fa fa-clock fa-md mr-2 tsm" />
-                                            <span className="tsm ">
+                                            <span className="tsm text-white ">
                                                 <Moment calendar>{post.date}</Moment>
                                             </span>
                                         </div>
@@ -76,9 +76,9 @@ class Result extends Component {
 
                 </div>
                 {this.props.search[2] > 0 &&
-                    <div className="text-center w-100 border-top px-2">
+                    <div className="text-center w-100 border-top px-2 text-white">
 
-                        <span className="btn btn-sm mr-2 " onClick={() => {
+                        <span className="btn btn-sm mr-2 text-white" onClick={() => {
                             console.log("start")
                             totalCount = this.props.search[2]
                             console.log(totalCount, "found")
@@ -95,7 +95,7 @@ class Result extends Component {
                                 })
                             }
                         }}>prev</span>
-                        <span className="small mr-1 px-1"> {count + 1} of {Number(this.props.search[2])}</span>
+                        <span className="small mr-1 px-1 text-white"> {count + 1} of {Number(this.props.search[2])}</span>
                         <span className="btn btn-sm ml-2 " onClick={() => {
                             let c = 1
                             console.log("start")

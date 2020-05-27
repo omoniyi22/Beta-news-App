@@ -110,13 +110,17 @@ outline: 0 !important;
 	font-size: large;
 }
 
-.nav-item:hover,
 .nav-item:hover .arrow {
-	background: whitesmoke;
+	background: rgba(119, 81, 81, 0);
 	color: rgb(168, 47, 23);
 	padding-bottom: 9px;
 	border: 0px 3px solid white;
 }
+.nav-item:hover{
+		background: rgba(119, 81, 81, 0);
+
+}
+
 .arrow {
 	color: white !important;
 	border-radius: 50%;
@@ -175,7 +179,7 @@ ul.drop-left{
 
 .mobile-naav{
 width: 100%;
-min-height: 100%;
+min-height: 101%;
 z-index: 2 !important;
 color: black !important;
 /* background: rgba(117, 30, 30, 0.986); */
@@ -186,9 +190,7 @@ background-image: linear-gradient(
 		rgba(194, 161, 161, 0.993)
 	);
 }
-.nav-item:hover{
-padding-bottom: 0px;
-}
+
 .dropdowned{
 	display: none;
 }
@@ -212,18 +214,26 @@ z-index: 2;
 
 /* The side navigation menu */
 .sidenav {
-    height: 100%; /* 100% Full-height */
+	height: 101%; /* 100% Full-height */
+	max-height: 101%;
+	min-height: 101%;
+	overflow: scroll !important;
+	padding-bottom: 140px !important;
+	text-overflow: inherit;
+	overflow-wrap: inherit;
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
-    top: 0;
-    left: 0;
+   
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: scroll !important; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.8s; /* 0.5 second transition effect to slide in the sidenav */
 }
-.nav-item:hover
+.nav-item{
+ background-color: rgba(14, 40, 66, 0.637);
+}
+
 /* The navigation menu links */
 .sidenav a {
     padding: 8px 8px 8px 32px;
@@ -255,7 +265,7 @@ z-index: 2;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
+/* @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-}
+} */
