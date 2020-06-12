@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const mongoose = require('mongoose')
-const My_Users = require('./../models/User')
+const My_Users = require('./My-Users')
 
 
 //_Targets_
@@ -13,8 +13,8 @@ const My_Users = require('./../models/User')
 // previous: action.payload.previous,
 // next: action.payload.next,
 
-router.get(`/settings/users`, (req, response) => {
-    let { page, page_size, search } = req.query
+router.get(`/users`, (req, response) => {
+    let { page, page_size, search, rowsPerPage } = req.query
     //currentPage perPage searchValue
 
     function fola(users) {
@@ -24,7 +24,7 @@ router.get(`/settings/users`, (req, response) => {
         let slicedResult
 
         let results = []     //users returned
-
+        // if (search & page_size & page) {
         while (i < no_of_pages) {
             slicedResult = users.splice(0, perPage)
             results.push(slicedResult)
@@ -38,6 +38,20 @@ router.get(`/settings/users`, (req, response) => {
             next: page == results.length ? null : Number(page) + 1,
             previous: page == 1 ? null : Number(page - 1),
         })
+        //     } else if (page || page_size || rowsPerPage) {
+        //         if(page){
+
+        //         }
+        //         return ({
+        //             results: results[page - 1],
+        //             page_count: Number(results.length),
+        //             current_page: Number(page),
+        //             items_per_page: Number(results[page - 1].length),
+        //             next: page == results.length ? null : Number(page) + 1,
+        //             previous: page == 1 ? null : Number(page - 1),
+        //         })
+
+        //     }
     }
     My_Users.find()
         .then(res => {

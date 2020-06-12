@@ -53,8 +53,8 @@ export default function Users() {
     : 10;
 
   const handleChangePage = (event, newPage) => {
-    params.set("page", newPage + 1);
-    // history.push("/settings/users?" + params.toString());
+    params.set("page", Number(newPage) + 1);
+    history.push("/settings/users?" + params.toString());
   };
 
   const handleChangeRowsPerPage = (event) => {
@@ -168,7 +168,7 @@ export default function Users() {
             component="div"
             count={totalPages}
             rowsPerPage={itemsPerPage}
-            page={currentPage - 1}
+            page={Number(currentPage) - 1}
             backIconButtonProps={{
               disabled: previous === null,
             }}
