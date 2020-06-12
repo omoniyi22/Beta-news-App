@@ -61,7 +61,7 @@ class Posts extends Component {
                     <span className="fa fa-arrow-circle-left" /> Back
                 </button>
 
-                <div className='contact col-md-7 mx-5 px-1'>
+                <div className='contact col-md-7 mx-0 px-0 px-1'>
                     <div className='text-center h2 mb-3 text-uppercase'>POST {this.state.type} NEWS</div>
                     {this.state.mg && <div className="alert alert-primary alert-dismissable fade show col-sm-11 mbottm" role='alert'>
                         <button type="button" className="close text-danger " onClick={this.close = this.close.bind(this)} aria-label="Close"

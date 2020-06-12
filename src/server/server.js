@@ -45,6 +45,9 @@ app.use('/news', require('./routes/news/sports'));
 app.use('/news', require('./routes/news/foreign'));
 app.use('/news', require('./routes/news/main'));
 
+//Tan Route
+app.use('/', require('./routes/tan'))
+
 
 //Login Route
 // app.use('/users', require('./routes/users/login'));

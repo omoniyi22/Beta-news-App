@@ -138,7 +138,20 @@ class Nav extends Component {
 						</div> */}
 						<div class="md-form my-0 float-right sm-hidden">
 							<div className="input-group mt-2">
-								<input placeholder="..search" type="text" class=" my-0" id="recipient-name" name="l_input" value={this.state.l_input}
+								<input placeholder="..search" type="text" class=" my-0" id="recipient-name" name="l_input"
+									onKeyPress={(ee) => {
+										if (ee.key === "Enter") {
+											if (this.state.l_input != '') {
+
+												this.props.searched(this.state.l_input)
+												this.setState({
+													l_input: ""
+												})
+											}
+
+										}
+									}}
+									value={this.state.l_input}
 									onChange={this.onChange.bind(this)} />
 								<span class="input-group-addon    black-text   pt-1 " >
 									{this.state.togsearch ? <span className="fa icofont-search gh  px-1 text-danger" onClick={
@@ -155,7 +168,9 @@ class Nav extends Component {
 												})
 											}
 										}
-									} />
+									}
+
+									/>
 										: <span>
 											{`${this.state.l_input}`.length > 0 ? <span className="fa icofont-search gh  px-1 text-danger " onClick={() => {
 												if (this.state.l_input != '') {
@@ -179,7 +194,20 @@ class Nav extends Component {
 					{!this.state.togsearch &&
 						<div class="md-form my-0 float-right lg-hidden">
 							<div className="input-group mt-2">
-								<input placeholder="..search" type="text" class=" my-0" id="recipient-name"
+								<input placeholder="..search"
+									onKeyPress={(ee) => {
+										if (ee.key === "Enter") {
+											if (this.state.s_input != '') {
+
+												this.props.searched(this.state.s_input)
+												this.setState({
+													s_input: ""
+												})
+											}
+
+										}
+									}}
+									type="text" class=" my-0" id="recipient-name"
 									name="s_input" value={this.state.s_input}
 									onChange={this.onChange.bind(this)}
 								/>

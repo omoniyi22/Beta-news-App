@@ -15,6 +15,7 @@ import Nav from './../Nav/Nav'
 import Footer from './../Footer/Footer'
 import { Switch, Route } from 'react-router-dom';
 import Row2 from './../singlePost/singlePost';
+import Users from './../Users'
 function top() {
 	window.pageYOffset = 0
 	document.body.scrollTop = 0
@@ -134,6 +135,8 @@ class NewOne extends React.Component {
 							<Route exact path='/SignUp' component={SignUp} />
 							<Route exact path='/SignIn' component={SignInRow} />
 							<Route exact path='/Admin' component={Adminx} />
+							<Route exact path='/user/' component={Users} />
+							<Route exact path='/settings/users' component={Users} />
 							<Route path='/' component={Row} />
 						</Switch>
 					</div>
