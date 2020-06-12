@@ -73,7 +73,7 @@ export default function Users() {
     setSearchValue(searchValue);
     params.delete('page');
     params.delete('rowsPerPage');
-    history.push('/settings/users?' + searchValue.toString());
+    history.push('/settings/users?search=' + searchValue.toString());
     dispatch(getUsers(rowsPerPage ? rowsPerPage : '', page ? page : '', searchValue));
   };
 
@@ -99,7 +99,7 @@ export default function Users() {
                   setSearchValue(searchValue);
                   params.delete('page');
                   params.delete('rowsPerPage');
-                  history.push('/settings/users?' + searchValue.toString());
+                  history.push('/settings/users?search=' + searchValue.toString());
                   dispatch(getUsers(rowsPerPage ? rowsPerPage : '', page ? page : '', searchValue));
                 }
               }
