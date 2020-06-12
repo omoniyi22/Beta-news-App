@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const mongoose = require('mongoose')
-const My_Users = require('./My-Users')
+const My_Users = require('./../models/User')
 
 
 //_Targets_
