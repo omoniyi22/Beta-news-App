@@ -1,6 +1,6 @@
 # Beta-news
 This blog was built by me after am done with my full stack courses
-Technologies used in building this project
+-Technologies used in building this project
 - React Js
 - Redux for state management
 - Mongo DB for the data base
