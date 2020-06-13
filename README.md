@@ -7,3 +7,4 @@ Technologies used in building this project
 - Express Js for building the api
 - Nodemailer for Email Service 
 - MD-Bootstrap library for frontend design
+- Firebase Storage for storing files
