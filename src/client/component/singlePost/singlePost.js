@@ -239,8 +239,8 @@ class Row2 extends React.Component {
 													<div className='small col-md-10 col-sm-12 my-sm-3'>
 														<span className='font-weight-bold ml-2'>Seun</span> <br />
 														<span className="small">
-															Seun is a software developer, astute marketer and customer relationship professional with over 2
-															decades of experience. His blog aims to motivate people to aspire to greatness
+														Seun is a software developer who is passionate about building fast, institutive and performance-driven applications.
+									I love learning new skills and teaming with fellow developers to build amazing stuffs.
 												</span>
 													</div>
 												</div>
